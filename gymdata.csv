@@ -1,0 +1,161 @@
+lp;Nazwa;Obci¹¿enie;Serii;Powtórzeñ;Data;Rok;Ciê¿ar;Rodzaj;Straty [P];Straty [C]
+1;Przysiady;26;3;10;44416;2021;780;Sztanga;0;780
+2;Wyciskanie - ¿o³nierz;26;3;10;44416;2021;780;Sztanga;0;780
+3;Hantle - biceps;10;3;12;44416;2021;360;Hantle;0;360
+4;Rozpiêtki;10;3;6;44416;2021;180;Hantle;0;180
+5;Wios³owanie;26;3;10;44416;2021;780;Sztanga;0;780
+6;Pompki;0;3;10;44416;2021;0;Kalistenika;0;0
+7;Martwy ci¹g;66;3;5;44428;2021;990;Sztanga;0;990
+8;Wyciskanie ;66;5;5;44428;2021;1650;Sztanga;0;1650
+9;Hantle - biceps;15;3;8;44428;2021;360;Hantle;0;360
+10;Rozpiêtki;8;3;6;44428;2021;144;Hantle;0;144
+11;Wyciskanie ;70;5;4;44438;2021;1400;Sztanga;0;1400
+12;Martwy ci¹g;90;4;5;44438;2021;1800;Sztanga;0;1800
+13;Hantle - biceps;16;5;5;44438;2021;400;Hantle;0;400
+14;Rozpiêtki;8;4;10;44438;2021;320;Hantle;0;320
+15;Wyciskanie - ¿o³nierz;46;5;4;44445;2021;920;Sztanga;0;920
+16;Wios³owanie;56;5;6;44445;2021;1680;Sztanga;0;1680
+17;Hantle - biceps;16;5;6;44445;2021;480;Hantle;0;480
+18;Rozpiêtki;10;3;6;44445;2021;180;Hantle;0;180
+19;Wyciskanie ;70;5;4;44452;2021;1400;Sztanga;0;1400
+20;Hantle - biceps;16;5;7;44452;2021;560;Hantle;0;560
+21;Martwy ci¹g;70;5;6;44452;2021;2100;Sztanga;0;2100
+22;Rozpiêtki;10;5;9;44452;2021;450;Hantle;0;450
+23;Przysiady;46;5;6;44459;2021;1380;Sztanga;0;1380
+24;Wyciskanie - Skos;60;6;5;44459;2021;1800;Sztanga;0;1800
+25;Hantle - biceps;16,5;4;7;44459;2021;462;Hantle;0;462
+26;Rozpiêtki;10;5;9;44459;2021;450;Hantle;0;450
+27;Wios³owanie;60;6;8;44459;2021;2880;Sztanga;0;2880
+28;Martwy ci¹g;120;1;1;44491;2021;120;Sztanga;0;120
+29;Wyciskanie ;86;1;1;44491;2021;86;Sztanga;0;86
+30;Wyciskanie - ¿o³nierz;60;1;1;44491;2021;60;Sztanga;0;60
+31;Wyciskanie ;76;5;3;44497;2021;1140;Sztanga;0;1140
+32;Hantle - biceps;18;5;8;44497;2021;720;Hantle;0;720
+33;Rozpiêtki;10;5;8;44497;2021;400;Hantle;0;400
+34;Wyciskanie ;76;5;4;44504;2021;1520;Sztanga;0;1520
+35;Hantle - biceps;20;5;6;44504;2021;600;Hantle;0;600
+36;Rozpiêtki;10;5;8;44504;2021;400;Hantle;0;400
+37;Wyciskanie ;76;4;4;44509;2021;1216;Sztanga;0;1216
+38;Hantle - biceps;20;5;7;44509;2021;700;Hantle;0;700
+39;Rozpiêtki;10,5;5;12;44509;2021;630;Hantle;0;630
+40;Wyciskanie ;76;5;4;44512;2021;1520;Sztanga;0;1520
+41;Martwy ci¹g;76;5;5;44512;2021;1900;Sztanga;2;1748
+42;Hantle - biceps;20;5;7;44512;2021;700;Hantle;0;700
+43;Rozpiêtki;10,5;5;12;44512;2021;630;Hantle;0;630
+44;Wyciskanie - w¹skie;36;5;12;44512;2021;2160;Sztanga;0;2160
+45;Hantle - ³ydki;20;5;8;44512;2021;800;Hantle;0;800
+46;Wyciskanie - skos;60;5;8;44515;2021;2400;Sztanga;1;2340
+47;Hantle - biceps;20;5;8;44515;2021;800;Hantle;0;800
+48;Rozpiêtki;10,5;5;12;44515;2021;630;Hantle;0;630
+49;Wyciskanie - ¿o³nierz;46;5;6;44518;2021;1380;Sztanga;0;1380
+50;Wyciskanie - w¹skie;40;6;12;44518;2021;2880;Sztanga;0;2880
+51;Wios³owanie;60;6;8;44518;2021;2880;Sztanga;0;2880
+52;Wykroki;20;5;8;44518;2021;800;Hantle;0;800
+53;Hantle - biceps;20;5;5;44518;2021;500;Hantle;0;500
+54;Wyciskanie ;73,5;5;5;44525;2021;1837,5;Sztanga;1;1764
+55;Hantle - biceps;21;5;6;44525;2021;630;Hantle;0;630
+56;Wyciskanie - w¹skie;42,5;4;12;44525;2021;2040;Sztanga;2;1955
+57;Wykroki;21;2;8;44525;2021;336;Hantle;0;336
+58;Wyciskanie ;73,5;4;5;44530;2021;1470;Sztanga;2;1323
+59;Hantle - biceps;21;5;7;44530;2021;735;Hantle;0;735
+60;Rozpiêtki;11;5;8;44530;2021;440;Hantle;0;440
+61;Wyciskanie ;73,5;5;5;44532;2021;1837,5;Sztanga;1;1764
+62;Hammer;23,5;4;6;44532;2021;564;Hantle;0;564
+63;Biceps - Sztanga;30;4;6;44532;2021;720;Sztanga;0;720
+64;Wyciskanie - skos;62,5;5;7;44536;2021;2187,5;Sztanga;0;2187,5
+65;Hammer;23,5;5;7;44536;2021;822,5;Hantle;0;822,5
+66;Wyciskanie - w¹skie;42,5;6;12;44536;2021;3060;Sztanga;0;3060
+67;Wyciskanie - ¿o³nierz;50;6;4;44540;2021;1200;Sztanga;0;1200
+68;Martwy ci¹g;81;4;5;44540;2021;1620;Sztanga;0;1620
+69;Hantle - biceps;23,5;5;6;44540;2021;705;Hantle;0;705
+70;Wyciskanie - ¿o³nierz;54;5;4;44543;2021;1080;Sztanga;1;1026
+71;Hantle - biceps;23,5;5;6;44543;2021;705;Hantle;1;681,5
+72;Wyciskanie ;76;5;3;44545;2021;1140;Sztanga;0;1140
+73;Martwy ci¹g;81;4;5;44545;2021;1620;Sztanga;0;1620
+74;Wyciskanie ;76;5;4;44555;2021;1520;Sztanga;1;1444
+75;Hantle - biceps;23,5;2;6;44555;2021;282;Hantle;0;282
+76;Martwy ci¹g;81;4;5;44558;2021;1620;Sztanga;0;1620
+77;Wyciskanie ;76;4;5;44558;2021;1520;Sztanga;3;1292
+78;Wyciskanie ;76;5;4;44562;2022;1520;Sztanga;0;1520
+79;Hantle - biceps;23,5;5;6;44562;2022;705;Hantle;0;705
+80;Wyciskanie - w¹skie;41;5;12;44562;2022;2460;Sztanga;0;2460
+81;Wyciskanie - ¿o³nierz;51;5;5;44565;2022;1275;Sztanga;0;1275
+82;Wios³owanie;61;5;8;44565;2022;2440;Sztanga;0;2440
+83;Hantle - biceps;23,5;4;7;44565;2022;658;Hantle;0;658
+84;Wyciskanie - ¿o³nierz;56;5;4;44569;2022;1120;Sztanga;0;1120
+85;Wyciskanie - skos;66;5;5;44569;2022;1650;Sztanga;0;1650
+86;Wyciskanie ;76;5;5;44573;2022;1900;Sztanga;0;1900
+87;Wyciskanie - w¹skie;42,5;5;10;44573;2022;2125;Sztanga;0;2125
+88;Hantle - biceps;23,5;3;5;44573;2022;352,5;Hantle;0;352,5
+89;Wyciskanie ;81;5;3;44576;2022;1215;Sztanga;0;1215
+90;Wios³owanie;66;5;8;44576;2022;2640;Sztanga;0;2640
+91;Hammer;23,5;5;6;44576;2022;705;Hantle;0;705
+92;Pompki;0;3;20;44576;2022;0;Kalistenika;0;0
+93;Pompki;0;5;15;44577;2022;0;Kalistenika;0;0
+94;Pompki;0;5;15;44578;2022;0;Kalistenika;0;0
+95;Wyciskanie - skos;66;5;6;44580;2022;1980;Sztanga;0;1980
+96;Hantle - biceps;23,5;4;5;44580;2022;470;Hantle;0;470
+97;Wyciskanie ;81;5;3;44584;2022;1215;Sztanga;1;1134
+98;Martwy ci¹g;81;5;6;44584;2022;2430;Sztanga;0;2430
+99;Rozpiêtki;13;5;8;44584;2022;520;Hantle;0;520
+100;Wyciskanie - ¿o³nierz;56;5;4;44587;2022;1120;Sztanga;0;1120
+101;Rozpiêtki;13;5;8;44587;2022;520;Hantle;0;520
+102;Biceps - Sztanga;31;3;8;44587;2022;744;Sztanga;0;744
+103;Wyciskanie ;81;5;3;44592;2022;1215;Sztanga;0;1215
+104;Martwy ci¹g;86;5;5;44592;2022;2150;Sztanga;0;2150
+105;Rozpiêtki;13;4;8;44592;2022;416;Hantle;0;416
+106;Wyciskanie - skos;66;6;6;44597;2022;2376;Sztanga;0;2376
+107;Hantle - biceps;23,5;2;6;44597;2022;282;Hantle;0;282
+108;Martwy ci¹g;86;3;6;44597;2022;1548;Sztanga;0;1548
+109;Wyciskanie ;76;4;5;44614;2022;1520;Sztanga;3;1292
+110;Hantle - biceps;23,5;4;5;44614;2022;470;Hantle;0;470
+111;Wios³owanie;66;4;6;44614;2022;1584;Sztanga;0;1584
+112;Wyciskanie ;81;5;3;44620;2022;1215;Sztanga;0;1215
+113;Wios³owanie;76;5;5;44620;2022;1900;Sztanga;0;1900
+114;Hantle - biceps;23,5;3;6;44620;2022;423;Hantle;1;399,5
+115;Wyciskanie - ¿o³nierz;51;5;5;44625;2022;1275;Sztanga;0;1275
+116;Hantle - biceps;21;5;7;44625;2022;735;Hantle;0;735
+117;Wios³owanie;61;5;8;44625;2022;2440;Sztanga;0;2440
+118;Przysiady;50;5;5;44627;2022;1250;Sztanga;0;1250
+119;Wyciskanie ;71;5;5;44627;2022;1775;Sztanga;0;1775
+120;Wios³owanie;61;5;6;44627;2022;1830;Sztanga;0;1830
+121;Hantle - biceps;21;5;6;44627;2022;630;Hantle;0;630
+122;Wyciskanie - w¹skie;41;5;10;44627;2022;2050;Sztanga;0;2050
+123;Martwy ci¹g;76;5;5;44629;2022;1900;Sztanga;0;1900
+124;Wyciskanie - ¿o³nierz;51;5;5;44629;2022;1275;Sztanga;0;1275
+125;Hantle - biceps;21;5;7;44629;2022;735;Hantle;0;735
+126;Wyciskanie - w¹skie;41;5;12;44629;2022;2460;Sztanga;0;2460
+127;Wyciskanie ;71;5;6;44635;2022;2130;Sztanga;0;2130
+128;Hantle - biceps;21;5;8;44635;2022;840;Hantle;0;840
+129;Wyciskanie ;71;5;6;44642;2022;2130;Sztanga;0;2130
+130;Wios³owanie;61;5;7;44642;2022;2135;Sztanga;0;2135
+131;Wyciskanie - w¹skie;41;5;12;44642;2022;2460;Sztanga;0;2460
+132;Hantle - biceps;21;5;8;44642;2022;840;Hantle;0;840
+133;Wyciskanie ;71;5;6;44649;2022;2130;Sztanga;0;2130
+134;Wios³owanie;61;5;8;44649;2022;2440;Sztanga;0;2440
+135;Biceps - Sztanga;31;5;8;44649;2022;1240;Sztanga;0;1240
+136;Wyciskanie - w¹skie;46;4;8;44649;2022;1472;Sztanga;0;1472
+137;Wyciskanie - ¿o³nierz;46;5;6;44654;2022;1380;Sztanga;0;1380
+138;Wyciskanie - skos;56;5;6;44654;2022;1680;Sztanga;0;1680
+139;Hantle - biceps;21;5;9;44654;2022;945;Hantle;2;903
+140;Wios³owanie;61;5;8;44654;2022;2440;Sztanga;0;2440
+141;Wyciskanie ;71;5;7;44661;2022;2485;Sztanga;1;2414
+142;Biceps - Sztanga;31;5;9;44661;2022;1395;Sztanga;0;1395
+143;Wyciskanie - w¹skie;46;5;9;44661;2022;2070;Sztanga;0;2070
+144;Wyciskanie;71;5;7;44667;2022;2485;Sztanga;2;2343
+145;Biceps - Sztanga;31;5;10;44667;2022;1550;Sztanga;0;1550
+146;Wyciskanie - waskie;46;6;10;44667;2022;2760;Sztanga;0;2760
+147;Martwy ciag;81;5;5;44667;2022;2025;Sztanga;0;2025
+148;Rozpietki;11;5;8;44667;2022;440;Hantle;0;440
+149;Wyciskanie - waskie;66;5;7;44667;2022;2310;Sztanga;0;2310
+150;Rozpietki;11;5;12;44667;2022;660;Hantle;0;660
+151;Biceps - Sztanga;31;5;11;44677;2022;1705;Sztanga;0;1705
+152;Wyciskanie;71;4;8;44683;2022;2272;Sztanga;1;2201
+153;Wyciskanie;81;4;6;44683;2022;1944;Sztanga;0;1944
+154;Rozpietki;11;4;12;44683;2022;528;Hantle;0;528
+155;Wyciskanie;71;3;7;44691;2022;1491;Sztanga;0;1491
+156;Wyciskanie - zolnierz;51;2;5;44691;2022;510;Sztanga;0;510
+157;Wioslowanie;61;6;8;44691;2022;2928;Sztanga;0;2928
+158;Rozpietki;11;6;12;44691;2022;792;Hantle;0;792
+159;Biceps - Sztanga;36;5;6;44691;2022;1080;Sztanga;0;1080
+160;Wyciskanie - waskie;46;3;10;44691;2022;1380;Sztanga;0;1380
