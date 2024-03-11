@@ -33,20 +33,38 @@ ui <- page_navbar(
     "Enter Data",
     # First Level
     layout_columns(
-      col_widths  = c(2, 8, 2),
+      col_widths  = c(2, 7, 3),
       card(
         height = "400px",
-        selectInput("t", "Name", iris$Species),
-        sliderInput("g", "Weight", 0, 200, 100, 0.25, T, F, dragRange = T), 
+        selectInput("ed.user.excercise", "Excercise name", iris$Species),
+        sliderInput("ed.user.weight", "Weight", 0, 200, 100, 0.25, T, F, dragRange = T), 
         layout_columns(
           col_widths = c(6, 6),
-          numericInput("d", "Sets", 3, 1, 24),
-          numericInput("d", "Reps", 3, 1, 48)
-        )
+          numericInput("ed.user.sets", "Sets", 3, 1, 24),
+          numericInput("ed.user.reps", "Reps", 3, 1, 48)
+        ),
+        actionButton("ed.user.accept", "Enter")
       ),
       card(
-        height = "600px",
-        full_screen = T
+        height = "400px",
+        full_screen = T,
+        uiLineGymNew("EnterData2")
+      ),
+      layout_column_wrap(
+        value_box(
+          title = div("Progress", style = "font-weight: 500; font-size: 30px"),
+          value = div("24%", style = "font-weight: 900; font-size: 54px"),
+          fill = F,
+          theme = value_box_theme(bg = "#fff", fg = "#4361ee"),
+          showcase = icon("dumbbell"), "correlates with the strength and force progress"
+        ),
+        value_box(
+          title = div("Progress", style = "font-weight: 500; font-size: 30px"),
+          value = div("-13%", style = "font-weight: 900; font-size: 54px"),
+          fill = F,
+          theme = value_box_theme(bg = "#fff", fg = "#515151"),
+          showcase = icon("fire"), "correlates with the speed and power progress"
+        )
       )
     ),
     # Second Level
@@ -54,7 +72,7 @@ ui <- page_navbar(
       col_widths = c(10, 2),
       card(
         height = "500px",
-        uiTableGymOverview("EnterData")
+        uiTableGymOverview("EnterData1")
       ),
       card(
         height = "500px",

@@ -5,7 +5,9 @@ server <- function(input, output, session) {
   
   ### Raw data in data frame convention
   dfGymRaw <- reactiveVal(NULL)
-  observe(dfGymRaw(getGymData("init" ,"data/gymdata.csv")))
+  observe(dfGymRaw(getData("init" ,"data/gymdata.csv")))
   
-  serverTableGymOverview("EnterData", reactive(dfGymRaw()))
+  ### Processing modules server side
+  serverTableGymOverview("EnterData1", reactive(dfGymRaw()))
+  serverLineGymNew("EnterData2", reactive(dfGymRaw()))
 }

@@ -1,5 +1,5 @@
 # Server Side
-getGymData <- function(id, path) {
+getData <- function(id, path) {
   moduleServer(id, function(input, output, session) {
     ### Load data
     gdf <- read_delim(
