@@ -31,6 +31,8 @@ ui <- page_navbar(
   ### Panel - Entering Data
   nav_panel(
     "Enter Data",
+    # add login panel UI function
+    shinyauthr::loginUI(id = "login"),
     # First Level
     layout_columns(
       col_widths  = c(2, 7, 3),
@@ -48,11 +50,7 @@ ui <- page_navbar(
         ),
         actionButton("ed.user.accept", "Enter")
       ),
-      card(
-        height = "400px",
-        full_screen = T,
-        uiLineGymNew("EnterData2")
-      ),
+      uiLineGymNew("EnterData2"),
       layout_column_wrap(
         value_box(
           title = div("Progress", style = "font-weight: 500; font-size: 30px"),
@@ -73,10 +71,7 @@ ui <- page_navbar(
     # Second Level
     layout_columns(
       col_widths = c(10, 2),
-      card(
-        height = "500px",
-        uiTableGymOverview("EnterData1")
-      ),
+      uiTableGymOverview("EnterData1"),
       card(
         height = "500px",
         full_screen = T,
@@ -89,5 +84,6 @@ ui <- page_navbar(
   ),
   ### Panel - Items
   nav_item(uiPanelGitHub),
-  nav_item(input_dark_mode(id = "dark_mode", mode = "light"))
+  nav_item(input_dark_mode(id = "dark_mode", mode = "light")),
+  nav_item(div(class = "pull-right", shinyauthr::logoutUI(id = "logout")))
 )

@@ -3,15 +3,39 @@ server <- function(input, output, session) {
   modules <- dir("modules", full.names = T, recursive = T)
   lapply(modules, source)
   
-  ### Raw data in data frame convention
-  dfGymRaw <- reactiveVal(NULL)
-  observe(dfGymRaw(getData("init" ,"data/gymdata.csv")))
+  ### Loading Data into app
+  dataList <- reactiveValues()
+  userCred <- reactiveVal() 
+  observe({
+    list <- getData("init")
+    
+    dataList$main <- list[["gD"]]
+    dataList$user <- list[["uD"]]
+    
+    #userCred(credentials()$user_auth)
+    userCred(TRUE)
+  })
+  
+  ### Login
+  credentials <- shinyauthr::loginServer(
+    id = "login",
+    data = mongo(collection = config$mongoCollCredentials, url = mongo_uri)$find(),
+    user_col = user,
+    pwd_col = password,
+    log_out = reactive(logout_init())
+  )
+  
+  # call the logout module with reactive trigger to hide/show
+  logout_init <- shinyauthr::logoutServer(
+    id = "logout",
+    active = reactive(credentials()$user_auth)
+  )
   
   ### Processing modules server side
-  serverTableGymOverview("EnterData1", reactive(dfGymRaw()))
-  serverLineGymNew("EnterData2", reactive(dfGymRaw()))
-  
+  serverTableGymOverview("EnterData1", reactive(dataList$user), reactive(userCred()))
+  serverLineGymNew("EnterData2", reactive(dataList$main), reactive(userCred()))
   
   ### update UI
-  updateUI("init", reactive(dfGymRaw()), session)
+  updateUI("init", reactive(dataList$main), session, reactive(userCred()))
+
 }

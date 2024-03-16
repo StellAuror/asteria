@@ -13,22 +13,33 @@
 uiTableGymOverview <- function(id) {
   ns <- NS(id)
   tagList(
-    reactableOutput(ns("table"))
+    uiOutput(ns("ui"))
   )
 }
 
-serverTableGymOverview <- function(id, data) {
+serverTableGymOverview <- function(id, data, isLogged) {
   moduleServer(id, function(input, output, session) {
+    output$ui <- renderUI({
+      req(isLogged())
+      
+      ns <- NS(id)
+      card(
+        reactableOutput(ns("table")),
+        height = "500px",
+        full_screen = T
+      )
+    })
+    
     output$table <- renderReactable({
       data() %>% head(10) %>%
-        select("id", "date", "name", "load", "weight", "set", "rep") %>%
+        select("ID", "Date", "Name", "Load", "Weight", "Rep") %>%
         reactable(
           #theme = theme,
-          defaultSorted = 'id',
+          defaultSorted = 'ID',
           defaultPageSize = 5,
           paginationType = 'jump',
           columns = list(
-            id = colDef(
+            ID = colDef(
               minWidth = 40,
               cell = pill_buttons(
                 data = .,
@@ -36,8 +47,8 @@ serverTableGymOverview <- function(id, data) {
                 opacity = 0.8
               )
             ),
-            name = colDef(maxWidth = 100),
-            load = colDef(
+            Name = colDef(maxWidth = 100),
+            Load = colDef(
               name = 'Total load',
               align = 'left',
               minWidth = 250,
@@ -47,14 +58,14 @@ serverTableGymOverview <- function(id, data) {
                 background = "#cccccc",
                 #number_fmt = scales::percent,
                 text_position = 'outside-base',
-                max_value = max(.$load),
+                max_value = max(.$Load),
                 text_color = '#4361ee',
                 round_edges = TRUE,
                 icon = "fire-flame-curved",
                 icon_color = "#2d41a1"
               )
             ),
-            weight = colDef(
+            Weight = colDef(
               name = 'Weight lifted',
               align = 'left',
               minWidth = 250,
@@ -64,14 +75,14 @@ serverTableGymOverview <- function(id, data) {
                 background = "#cccccc",
                 #number_fmt = scales::percent,
                 text_position = 'outside-base',
-                max_value = max(.$weight),
+                max_value = max(.$Weight),
                 text_color = '#4361ee',
                 round_edges = TRUE,
                 icon = "fire-flame-curved",
                 icon_color = "#2d41a1"
               )
             ),
-            date = colDef(
+            Date = colDef(
               minWidth = 125,
               cell = pill_buttons(
                 colors  = '#4361ee',
@@ -79,20 +90,7 @@ serverTableGymOverview <- function(id, data) {
                 opacity = 0.8
               )
             ),
-            set = colDef(
-              name = "Sets Done",
-              maxWidth = 150, 
-              align = 'center',
-              cell = icon_assign(
-                data = .,
-                fill_color = '#4361ee',
-                empty_color = '#0c0223',
-                empty_opacity = 0.8,
-                icon_size = 12,
-                icon = 'dumbbell'
-              )
-            ),
-            rep = colDef(
+            Rep = colDef(
               name = "Reps Done",
               maxWidth = 150, 
               align = 'center',

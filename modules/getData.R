@@ -1,23 +1,17 @@
 # Server Side
 getData <- function(id, path) {
   moduleServer(id, function(input, output, session) {
-    ### load config env
+    ### Main gym data from mongoDB cloud service
+    # load config & establish connection with mongo
     config <- config::get(config = "default")
-    
-    ### establish connection with mongoDB
     mongo_uri <- glue(
       "mongodb+srv://{config$mongoLogin}:{config$mongoPass}@{config$mongoHost}.mongodb.net/{config$mongoDB}"
     )
-    conn <- mongo(collection = config$mongoCollGym, url = mongo_uri)
-    gdf <- conn$find() 
+    gdf <- mongo(collection = config$mongoCollGym, url = mongo_uri)$find() 
     
-    ### change names & date adjustment
-    gdf <- gdf %>%  mutate(Data = as.Date(Data, origin = "1900-01-01"))
-    names(gdf) <- c(
-      "id", "name", "weight", "set", "rep", "date", "year",
-      "load", "type", "failed_reps", "failed_load"
-    )
+    ### Local data - entered by user but not sent to mongoDB yet
+    udf <- mongo(collection = config$mongoCollUserGym, url = mongo_uri)$find() 
     
-    gdf
+    list("gD" = gdf, "uD" = udf)
   })
 }

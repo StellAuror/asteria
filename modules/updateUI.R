@@ -1,16 +1,16 @@
-updateUI <- function(id, data, mainsession) {
+updateUI <- function(id, data, mainsession, isLogged) {
   moduleServer(
     id,
     function(input, output, session) {
       ### Enter Data
       # Entering exercise name - get from recent data 
-      observe(
+      observe({
         updateSelectInput(
           session = mainsession,
           inputId = "ed.user.excercise",
-          choices = unique(data()$name)
+          choices = unique(data()$Name)
         )
-      )
+      })
     }
   )
 }
