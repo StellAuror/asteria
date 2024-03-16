@@ -36,7 +36,10 @@ ui <- page_navbar(
       col_widths  = c(2, 7, 3),
       card(
         height = "400px",
-        selectInput("ed.user.excercise", "Excercise name", iris$Species),
+        selectizeInput(
+          "ed.user.excercise", "Excercise name", "",
+          options = list(create = T)
+        ),
         sliderInput("ed.user.weight", "Weight", 0, 200, 100, 0.25, T, F, dragRange = T), 
         layout_columns(
           col_widths = c(6, 6),

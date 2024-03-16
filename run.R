@@ -7,6 +7,9 @@
   library(reactable)
   library(reactablefmtr)
   library(bsicons)
+  library(glue)
+  # library(config) - better to use namespace:: due to the conflicting funs
+  library(mongolite)
   
   # Load Shiny Modules
   modules <- dir("modules", full.names = T, recursive = T)
@@ -17,3 +20,4 @@
 
   
   shinyApp(ui, server)  
+  
