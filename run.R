@@ -18,6 +18,12 @@
   source("ui.R")
   source("server.R")
 
+  # load config & establish connection with mongo
+  config <- config::get(config = "default")
+  mongo_uri <- glue(
+    "mongodb+srv://{config$mongoLogin}:{config$mongoPass}@{config$mongoHost}.mongodb.net/{config$mongoDB}"
+  )
+  
   
   shinyApp(ui, server)  
   
