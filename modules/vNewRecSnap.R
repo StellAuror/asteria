@@ -1,11 +1,11 @@
-uiLineGymNew <- function(id) {
+uivNewRecSnap <- function(id) {
   ns <- NS(id)
   tagList(
   uiOutput(ns("ui"))
   )
 }
 
-serverLineGymNew <- function(id, data, isLogged) {
+servervNewRecSnap <- function(id, data, isLogged) {
   moduleServer(id, function(input, output, session) {
     output$ui <- renderUI({
       req(isLogged())

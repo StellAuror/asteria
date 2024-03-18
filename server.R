@@ -12,8 +12,8 @@ server <- function(input, output, session) {
     dataList$main <- list[["gD"]]
     dataList$user <- list[["uD"]]
     
-    #userCred(credentials()$user_auth)
-    userCred(TRUE)
+    userCred(credentials()$user_auth)
+    #userCred(TRUE)
   })
   
   ### Login
@@ -32,10 +32,12 @@ server <- function(input, output, session) {
   )
   
   ### Processing modules server side
-  serverTableGymOverview("EnterData1", reactive(dataList$user), reactive(userCred()))
-  serverLineGymNew("EnterData2", reactive(dataList$main), reactive(userCred()))
+  servervEnterData("EnterData1", reactive(userCred()))
+  servervNewRecSnap("EnterData2", reactive(dataList$main), reactive(userCred()))
+  servervProgressBox("EnterData3", reactive(userCred()))
+  servervAddedRecs("EnterData4", reactive(dataList$user), reactive(userCred()))
+  servervAIRecom("EnterData5", reactive(userCred()))
   
   ### update UI
   updateUI("init", reactive(dataList$main), session, reactive(userCred()))
-
 }

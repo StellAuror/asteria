@@ -10,14 +10,14 @@
 #   pageButtonActiveStyle = list(backgroundColor = "hsl(233, 9%, 28%)")
 # )
 
-uiTableGymOverview <- function(id) {
+uivAddedRecs <- function(id) {
   ns <- NS(id)
   tagList(
     uiOutput(ns("ui"))
   )
 }
 
-serverTableGymOverview <- function(id, data, isLogged) {
+servervAddedRecs <- function(id, data, isLogged) {
   moduleServer(id, function(input, output, session) {
     output$ui <- renderUI({
       req(isLogged())
