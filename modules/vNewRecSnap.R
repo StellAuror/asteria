@@ -12,7 +12,7 @@ servervNewRecSnap <- function(id, data, isLogged) {
       ns <- NS(id)
       card(
         echarts4rOutput(ns("chart")),
-        height = "400px",
+        height = "450px",
         full_screen = T
       )
     })

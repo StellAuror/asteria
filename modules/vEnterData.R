@@ -1,30 +1,61 @@
 uivEnterData <- function(id) {
   ns <- NS(id)
-  uiOutput(ns("ui"))
+  tagList(
+    conditionalPanel(
+      condition = "isLogged()",
+      card(
+        tags$style(type = "text/css", 
+                   "#weightNum.form-control.shiny-bound-input {height: 730px;}"),
+        height = "450px",
+        selectizeInput(
+          ns("excercise"), "Excercise name", unique(data()$Name),
+          options = list(create = T)
+        ),
+        sliderInput(
+          ns("weight"), "Weight",
+          0, 200, 100, .25,
+          round = T, ticks = F, dragRange = T
+        ),
+        numericInput(
+          ns("weightNum"), "",
+          100, 0, 200, .25,
+          
+        ),
+        layout_columns(
+          col_widths = c(6, 6),
+          numericInput(
+            ns("sets"), "Sets",
+            3, 1, 24
+          ),
+          numericInput(
+            ns("reps"), "Reps",
+            3, 1, 48
+          )
+        ),
+        actionButton(ns("accept"), "Enter")
+      )
+    )
+  )
 }
 
-servervEnterData <- function(id, isLogged) {
+servervEnterData <- function(id, data, isLogged) {
   moduleServer(
     id,
     function(input, output, session) {
-      output$ui <- renderUI({
-        req(isLogged())
-        tagList(
-          card(
-            height = "400px",
-            selectizeInput(
-              "excercise", "Excercise name", "",
-              options = list(create = T)
-            ),
-            sliderInput("weight", "Weight", 0, 200, 100, 0.25, T, F, dragRange = T), 
-            layout_columns(
-              col_widths = c(6, 6),
-              numericInput("sets", "Sets", 3, 1, 24),
-              numericInput(".reps", "Reps", 3, 1, 48)
-            ),
-            actionButton("accept", "Enter")
-          )
+      # Adjust values to users' profile
+      observe({
+        updateSelectInput(
+          session = session, inputId = "excercise",
+          choices =  unique(data()$Name)
         )
+      })
+      # Numeric/Slider Input synergy
+      observe({
+        print(NS(id, input$fgdfg))
+        updateSliderInput(session, "weight", value = input[["weightNum"]])
+      })
+      observe({
+        updateNumericInput(session, "weightNum", value = input[["weight"]])
       })
     }
   )

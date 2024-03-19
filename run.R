@@ -24,5 +24,5 @@
     "mongodb+srv://{config$mongoLogin}:{config$mongoPass}@{config$mongoHost}.mongodb.net/{config$mongoDB}"
   )
   
-  shinyApp(ui, server) 
+  shinyApp(ui, server)
   
