@@ -7,64 +7,11 @@ library(plotly)
 
 
 ## Data
-Encoding .csv file, formatting dates & getting rid off ambiguous characters
+mongodb datasource
 ```{r}
-
-gdf <- read_delim("gymdata.csv", 
-    delim = ";", escape_double = FALSE, locale = locale(encoding = "WINDOWS-1252", 
-        asciify = TRUE), na = "empty", trim_ws = TRUE)
-
-gdf <- janitor::clean_names(gdf)
-
-gdf <- gdf %>%  mutate(data = as.Date(data, origin = "1900-01-01"))
-names(gdf) <- c(
-  "id", "name", "weight", "set", "rep", "date", "year",
-  "load", "type", "failed_reps", "failed_load"
-)
+config <- config::get(config = "default")
+gdf <- mongo(collection = config$mongoCollGym, url = mongo_uri)$find() 
 ```
-## Outliers
-In this case, attempts to lift the maximum load or those resulting from human error will be classified as outliers with a high degree of certainty.
-```{r}
-# Check the distribution of load by training number
-gdf_out <- data.frame(
-  load = gdf$load,
-  outlier = gdf$load > quantile(gdf$load, .25) + 3*IQR(gdf$load)
-) 
-
-gdf_out %>% ggplot(
-    aes(x = 1:nrow(gdf), y = load, color = outlier)
-  ) +
-  geom_point() + labs(x = "training number") + theme_minimal()
-
-
-# Getting rid off outliers
-gdf <- gdf %>%
-  mutate(
-    load = if_else(
-      quantile(gdf$load, .25) + 3*IQR(gdf$load) < load,
-      load / 100,
-      load
-    )
-  )
-
-# Checking the result 
-data.frame(
-  load = gdf$load,
-  outlier = gdf$load > quantile(gdf$load, .25) + 3*IQR(gdf$load)
-) %>%
-  ggplot(
-    aes(x = 1:nrow(gdf), y = load, color = outlier)
-  ) +
-  geom_point() + labs(x = "training number") + theme_minimal()
-
-# Investigating the outlier root cause
-gdf[gdf_out$outlier,]
-
-# Fixing records classified as outliers
-gdf <- rbind(gdf, gdf[gdf_out$outlier,] %>% mutate(weight = weight/100)) %>%
-  arrange(-id)
-```
-As expected, weight value is incredibly high and ends with '5' - which matches the case when the decimal separator is omitted due to a human error. As the rest of attributes seems to have normal values, the error can be fixed basing on the assumption.
 
 ![](images/Zrzut ekranu 2023-07-16 011543-02.png)
 
@@ -128,44 +75,32 @@ library(echarts4r)
 my_scale_small <- function(x) scales::rescale(x, to = c(10, 20))
 my_scale_large <- function(x) scales::rescale(x, to = c(30, 30))
 
-gdf %>% 
-  filter(
-    name == "Wyciskanie",
-    weight <= quantile(weight, .75) + IQR(weight) * .5,
-    weight >= quantile(weight, .25) - IQR(weight) * .5
-  ) %>%
-  arrange(id) %>%
-  mutate(
-    row = row_number(),
-    new_record = if_else(row_number() == round(max(row), 0), 2100, NA),
-    new_record_size = if_else(row_number() == round(max(row), 0), 10, 1),
-    normalized_weight = log((max(weight) - weight) / (max(weight) - min(weight)))
-  ) %>%
-  e_charts(row) %>%
-  e_line(load, color = '#9ac0d0', lineStyle = list(width = 3)) %>%
-  e_scatter(load, normalized_weight, scale = my_scale_small) %>%
-  e_scatter(new_record, size = new_record_size, scale = my_scale_large) %>%
-  e_theme("dark") %>%
-  e_theme_custom(
-    '{
-    "backgroundColor": ["#212121"],
-    "color": ["#4361ee", "#d81b60"],
-    "legend":{"textStyle": {"color": "#676971"}}
-    }'
-  ) %>%
-  e_tooltip() %>%
-  e_bar(weight, y_index = 1,  color = 'rgba(180, 180, 180, 0.2)') -> chart
-
-gdf %>%
-  filter(
-    name == "Wyciskanie",
-    load <= quantile(load, .75) + IQR(load) * .5,
-    load >= quantile(load, .25) - IQR(load) * .5
-  ) %>%
-  summarise(
-    `Total progress` = paste0(round((2100 / mean(load)) - 1, 2) * 100, "%"),
-    `Training To Training progress` = paste0(round(2100 / max(if_else(id == max(id), load, 0)), 2), "%")
-  ) -> vals
+  gdf %>%
+    filter(
+      Name == "Wyciskanie",
+      Weight <= quantile(Weight, .75) + IQR(Weight) * .5,
+      Weight >= quantile(Weight, .25) - IQR(Weight) * .5
+    ) %>%
+    arrange(ID) %>%
+    mutate(
+      row = row_number(),
+      new_record = if_else(row_number() == round(max(row) / 2, 0), 2100, NA),
+      new_record_size = if_else(row_number() == round(max(row) / 2, 0), 10, 1),
+      normalized_weight = log((max(Weight) - Weight) / (max(Weight) - min(Weight)))
+    ) %>%
+    e_charts(Date) %>%
+    e_line(Load, color = '#4361ee', lineStyle = list(width = 3)) %>%
+    e_scatter(Load, normalized_weight, scale = my_scale_small) %>%
+    e_scatter(new_record, size = new_record_size, scale = my_scale_large) %>%
+    e_theme_custom(
+      '{
+      "backgroundColor": ["#ffffff"],
+      "color": ["#4361ee", "#fe3939"],
+      "legend":{"textStyle": {"color": "#676971"}}
+      }'
+    ) %>%
+    e_tooltip() %>%
+    e_bar(Weight, y_index = 1,  color = '#bbbbbb')
 ```
 ```{r}
 

@@ -51,12 +51,22 @@ servervEnterData <- function(id, data, isLogged) {
       })
       # Numeric/Slider Input synergy
       observe({
-        print(NS(id, input$fgdfg))
-        updateSliderInput(session, "weight", value = input[["weightNum"]])
+        updateSliderInput(session, "weight", value = input$weightNum)
       })
       observe({
-        updateNumericInput(session, "weightNum", value = input[["weight"]])
+        updateNumericInput(session, "weightNum", value = input$weight)
       })
+      
+      # Return input values
+      returnList <- reactiveValues()
+      observe({
+        returnList$sets <- input$sets
+        returnList$reps <- input$reps
+        returnList$weight <- input$weight
+        returnList$excercise <- input$excercise
+      })
+      return(returnList)
+
     }
   )
 }
