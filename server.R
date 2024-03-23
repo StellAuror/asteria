@@ -34,12 +34,29 @@ server <- function(input, output, session) {
   ### Processing modules server side
   observe({
     dataList$enteredInput <- 
-      servervEnterData("EnterData1", reactive(dataList$main), reactive(userCred()))
+      servervEnterData(
+        "EnterData1",
+        reactive(dataList$main), reactive(userCred())
+      )
   })
-  servervNewRecSnap("EnterData2", reactive(dataList$main), reactive(userCred()), reactive(dataList$enteredInput))
-  servervProgressBox("EnterData3", reactive(userCred()))
-  servervAddedRecs("EnterData4", reactive(dataList$user), reactive(userCred()))
-  servervAIRecom("EnterData5", reactive(userCred()))
+  servervNewRecSnap(
+    "EnterData2",
+    reactive(dataList$main), reactive(userCred()),
+    reactive(dataList$enteredInput)
+  )
+  servervProgressBox(
+    "EnterData3",
+    reactive(userCred())
+  )
+  servervAddedRecs(
+    "EnterData4",
+    reactive(dataList$user), reactive(userCred()),
+    reactive(dataList$enteredInput)
+  )
+  servervAIRecom(
+    "EnterData5",
+    reactive(userCred())
+  )
   
   ### update UI
   updateUI("init", reactive(dataList$main), session, reactive(userCred()))

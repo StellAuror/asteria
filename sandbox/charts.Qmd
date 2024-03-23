@@ -3,8 +3,26 @@
 library(readr)
 library(tidyverse)
 library(plotly)
+
+
 ```
 
+```{r}
+page_fillable(
+  h1("Left and right sidebar", class = "px-3 my-3"),
+  layout_sidebar(
+    sidebar = sidebar("Left sidebar"),
+    layout_sidebar(
+        sidebar = sidebar("Right sidebar", position = "right", open = FALSE),
+        "Main contents",
+        border = FALSE
+    ),
+    border_radius = FALSE,
+    fillable = TRUE,
+    class = "p-0"
+  )
+)
+```
 
 ## Data
 mongodb datasource

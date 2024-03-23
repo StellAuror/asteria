@@ -9,20 +9,15 @@ uivEnterData <- function(id) {
         height = "450px",
         selectizeInput(
           ns("excercise"), "Excercise name", unique(data()$Name),
-          options = list(create = T)
-        ),
-        sliderInput(
-          ns("weight"), "Weight",
-          0, 200, 100, .25,
-          round = T, ticks = F, dragRange = T
+          options = list(create = T), width = "100%"
         ),
         numericInput(
-          ns("weightNum"), "",
+          ns("weight"), "Weight",
           100, 0, 200, .25,
-          
+          width = "100%"
         ),
         layout_columns(
-          col_widths = c(6, 6),
+          col_widths = c(6, 6, 12),
           numericInput(
             ns("sets"), "Sets",
             3, 1, 24
@@ -30,8 +25,10 @@ uivEnterData <- function(id) {
           numericInput(
             ns("reps"), "Reps",
             3, 1, 48
-          )
+          ),
+          dateInput("date", "Pick date")
         ),
+        
         actionButton(ns("accept"), "Enter")
       )
     )
@@ -51,10 +48,8 @@ servervEnterData <- function(id, data, isLogged) {
       })
       # Numeric/Slider Input synergy
       observe({
-        updateSliderInput(session, "weight", value = input$weightNum)
       })
       observe({
-        updateNumericInput(session, "weightNum", value = input$weight)
       })
       
       # Return input values
@@ -64,6 +59,7 @@ servervEnterData <- function(id, data, isLogged) {
         returnList$reps <- input$reps
         returnList$weight <- input$weight
         returnList$excercise <- input$excercise
+        returnList$accept <- input$accept
       })
       return(returnList)
 

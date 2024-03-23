@@ -42,7 +42,7 @@ ui <- page_navbar(
     ),
     # Second Level
     layout_columns(
-      col_widths = c(10, 2),
+      col_widths = c(9, 3),
       uivAddedRecs("EnterData4"),
       uivAIRecom("EnterData5")
     )
