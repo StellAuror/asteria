@@ -1,28 +1,24 @@
 ## Libraries
 ```{r}
-library(readr)
-library(tidyverse)
-library(plotly)
+  library(tidyverse)
+  library(shiny)
+  library(bslib)
+  library(htmltools)
+  library(lorem)
+  library(echarts4r)
+  library(reactable)
+  library(reactablefmtr)
+  library(bsicons)
+  library(glue)
+  # library(config) - better to use namespace:: due to the conflicting funs
+  library(mongolite)
 
-
-```
-
-```{r}
-page_fillable(
-  h1("Left and right sidebar", class = "px-3 my-3"),
-  layout_sidebar(
-    sidebar = sidebar("Left sidebar"),
-    layout_sidebar(
-        sidebar = sidebar("Right sidebar", position = "right", open = FALSE),
-        "Main contents",
-        border = FALSE
-    ),
-    border_radius = FALSE,
-    fillable = TRUE,
-    class = "p-0"
+  config <- config::get(config = "default")
+  mongo_uri <- glue(
+    "mongodb+srv://{config$mongoLogin}:{config$mongoPass}@{config$mongoHost}.mongodb.net/{config$mongoDB}"
   )
-)
 ```
+
 
 ## Data
 mongodb datasource
@@ -38,22 +34,37 @@ gdf <- mongo(collection = config$mongoCollGym, url = mongo_uri)$find()
 ```{r}
 # Power
 sf_data <-
-  gdf %>% group_by(year(date)) %>%
+  gdf %>%
+  group_by_all() %>%
+  summarise(Set = n()) %>%
+  ungroup() %>%
+  group_by(year(Date)) %>%
   summarise(
-    power = mean(load), # average load
-    strength = max(load), # max laod
-    durability = sum(set * rep), # total reps
-    intensivity = sum(rep) / sum(set), # proportion reps to sets
-    variety = max(summarise(group_by(gdf, date), n = n())[[2]]), # variety of excercises
-    musclnity = sum(load) # total load
+    power = mean(Load), # average load
+    strength = max(Load), # max laod
+    durability = sum(Set * Rep), # total reps
+    intensivity = sum(Rep) / sum(Set), # proportion reps to sets
+    variety = max(summarise(group_by(gdf, Date), n = n())[[2]]), # variety of excercises
+    musclnity = sum(Load) # total load
   ) %>% sapply(., function(x) round(x, 2))
 
 sf_data <- sf_data[1,-1] / sf_data[2,-1] 
+sf_data[length(sf_data) + 1] <- sf_data[1]
+names(sf_data) <- c(names(sf_data)[-length(sf_data)], names(sf_data)[1])
 
 
 plot_ly(
     type = 'scatterpolar',
-    fill = 'toself'
+    fill = 'toself',
+    fillcolor = 'rgba(168, 216, 234, 0.8)',
+    marker = list(
+      color = '#698087',
+      width = 3
+    ),
+    line = list(
+      color = '#698087',
+      width = 3
+    )
   ) %>%
   add_trace(
     r = sf_data,
@@ -71,20 +82,20 @@ plot_ly(
 ```
 
 ```{r}
-gdf %>% group_by(date = paste0(year(date), "-", month(date))) %>%
-  summarise(load = mean(load)) %>% as_tibble %>%
+gdf %>% group_by(Date = paste0(year(Date), "-", month(Date))) %>%
+  summarise(Load = mean(Load)) %>% as_tibble %>%
   plot_ly() %>%
   add_bars(
-    x = ~factor(date, levels = factor(paste0(rep(2021:2022, each = 12),"-", 1:12))),
-    y = ~load
+    x = ~factor(Date, levels = factor(paste0(rep(2021:2022, each = 12),"-", 1:12))),
+    y = ~Load
   )
 
-gdf %>% group_by(date = paste0(year(date), "-", week(date))) %>%
-  summarise(load = mean(load)) %>% as_tibble %>%
+gdf %>% group_by(Date = paste0(year(Date), "-", week(Date))) %>%
+  summarise(Load = mean(Load)) %>% as_tibble %>%
   plot_ly() %>%
   add_bars(
-    x = ~factor(date, levels = factor(paste0(rep(2021:2022, each = 52),"-", 1:52))),
-    y = ~load
+    x = ~factor(Date, levels = factor(paste0(rep(2021:2022, each = 52),"-", 1:52))),
+    y = ~Load
   )
 ```
   
@@ -122,112 +133,159 @@ my_scale_large <- function(x) scales::rescale(x, to = c(30, 30))
 ```
 ```{r}
 
-  gdf %>%
-  filter(
-    name == "Wyciskanie",
-    weight <= quantile(weight, .75) + IQR(weight) * .5,
-    weight >= quantile(weight, .25) - IQR(weight) * .5
-  ) %>%
-  mutate(
-    x = sample(1:5, n(), replace = T)
-    ) %>%
-  select("date", "type", "name", "set", "rep", "x", "id") %>%
-  reactable(
-  theme = reactableTheme(
-    color = "hsl(233, 9%, 87%)",
-    backgroundColor = "#212121",
-    borderColor = "hsl(233, 9%, 22%)",
-    stripedColor = "hsl(233, 12%, 22%)",
-    highlightColor = "hsl(233, 12%, 24%)",
-    inputStyle = list(backgroundColor = "hsl(233, 9%, 25%)"),
-    selectStyle = list(backgroundColor = "hsl(233, 9%, 25%)"),
-    pageButtonHoverStyle = list(backgroundColor = "hsl(233, 9%, 25%)"),
-    pageButtonActiveStyle = list(backgroundColor = "hsl(233, 9%, 28%)")
-  ),
-  defaultSorted = 'id',
-  defaultPageSize = 5,
+gdf %>%
+group_by_all() %>%
+summarise(Set = n()) %>%
+ungroup() %>%
+mutate(Load = Weight * Rep * Set) %>%
+reactable(
+  defaultSorted = 'ID',
+  defaultPageSize = 8,
   paginationType = 'jump',
   columns = list(
-    id = colDef(show = F),
-    type = colDef(maxWidth = 80),
-    name = colDef(maxWidth = 100),
-    rep = colDef(
-      name = 'Number of reps',
-      align = 'left',
-      minWidth = 250,
-      cell = data_bars(
+    ID = colDef(
+      minWidth = 40,
+      cell = pill_buttons(
         data = .,
-        fill_color = '#f72585',
-        background = "#333333",
-        #number_fmt = scales::percent,
-        text_position = 'outside-end',
-        max_value = max(.$rep),
-        text_color = '#f72585',
-        round_edges = TRUE,
-        icon = "fire-flame-curved",
-        icon_color = "#aa195b"
+        colors  = '#4361ee',
+        opacity = 0.8
       )
     ),
-    set = colDef(
-      name = 'Number of sets',
+    Name = colDef(maxWidth = 100),
+    Load = colDef(
+      name = 'Total load',
       align = 'left',
       minWidth = 250,
       cell = data_bars(
         data = .,
         fill_color = '#4361ee',
-        background = "#333333",
+        background = "#cccccc",
         #number_fmt = scales::percent,
-        text_position = 'outside-end',
-        max_value = max(.$set),
+        text_position = 'outside-base',
+        max_value = max(.$Load),
         text_color = '#4361ee',
         round_edges = TRUE,
         icon = "fire-flame-curved",
         icon_color = "#2d41a1"
       )
     ),
-  date = colDef(
-    minWidth = 125,
-    cell = pill_buttons(
-      data = .,
-      opacity = 0.8
-    )
-  ),
-  x = colDef(
-    maxWidth = 70, 
-    align = 'center',
+    Weight = colDef(
+      name = 'Weight lifted',
+      align = 'left',
+      minWidth = 250,
+      cell = data_bars(
+        data = .,
+        fill_color = '#4361ee',
+        background = "#cccccc",
+        #number_fmt = scales::percent,
+        text_position = 'outside-base',
+        max_value = max(.$Weight),
+        text_color = '#4361ee',
+        round_edges = TRUE,
+        icon = "fire-flame-curved",
+        icon_color = "#2d41a1"
+      )
+    ),
+    Date = colDef(
+      minWidth = 125,
+      cell = pill_buttons(
+        colors  = '#4361ee',
+        data = .,
+        opacity = 0.8
+      )
+    ),
+    Rep = colDef(
+      name = "Rep Done",
+      maxWidth = 150, 
+      align = 'center',
       cell = icon_assign(
         data = .,
-        fill_color = '#7209b7',
+        fill_color = '#4361ee',
         empty_color = '#0c0223',
         empty_opacity = 0.8,
         icon_size = 12,
         icon = 'dumbbell'
-        )
+      )
+    ),
+    Set = colDef(
+      name = "Rep Done",
+      maxWidth = 150, 
+      align = 'center',
+      cell = icon_assign(
+        data = .,
+        fill_color = '#4361ee',
+        empty_color = '#0c0223',
+        empty_opacity = 0.8,
+        icon_size = 12,
+        icon = 'dumbbell'
+      )
     )
   )
-) -> table
+) 
 ```
 ```{r}
-    config <- config::get(config = "default")
-    mongo_uri <- glue(
-      "mongodb+srv://{config$mongoLogin}:{config$mongoPass}@{config$mongoHost}.mongodb.net/{config$mongoDB}"
+Sys.setlocale("LC_TIME", "English")
+wdOrder <- c("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun") %>% rev
+#install.packages("ggchicklet",                    # Install & load ggchicklet package
+#                 repos = "https://cinc.rud.is")
+
+
+
+gdf %>%
+  select(Date) %>%
+  mutate(Date = as.Date(Date, format = "%Y-%m-%d")) %>%
+  group_by(Date) %>%
+  summarise(n = n()) %>%
+  rbind(
+    data.frame(
+      Date = 
+        seq(
+        as.Date(paste0(min(year(gdf$Date)),"-01-01"), format = "%Y-%m-%d"), 
+        as.Date(paste0(max(year(gdf$Date)),"-12-31"), format = "%Y-%m-%d"),
+        1
+      ),
+      n = 0
     )
-    mongo(collection = config$mongoCollUserGym, url = mongo_uri)$insert(
-      tibble(
-        ID = 0,
-        Name = "",
-        Weight = 0,
-        Rep = 0,
-        Date = as.Date(0),
-        Year = 0,
-        Load = 0,
-        Type = ""
-      )
-    ) 
-    
-    mongo(collection = config$mongoCollUserGym, url = mongo_uri)$find()
-    mongo(collection = config$mongoCollUserGym, url = mongo_uri)$drop()
-    df
+  ) %>% 
+  group_by(Date) %>%
+  summarise(n = sum(n, na.rm = T)) %>%
+  mutate(
+    m = month(Date),
+    w = week(Date),
+    wd = weekdays(Date, T) %>% factor(., levels = wdOrder, ordered = T),
+    y = year(Date),
+    n = if_else(n == 0, NA, n)
+  ) %>%
+  ggplot(
+    aes(
+      x = w,
+      y = wd,
+      fill = n
+    )
+  ) +
+  geom_tile(color = "white", size = .8, show.legend = F) +
+  facet_wrap(~y, ncol = 1) +
+  theme_minimal() +
+  scale_fill_gradient(low = "#0c0223", high = "#4361ee", na.value = "#dadada") + 
+  scale_x_continuous(
+    expand = c(0, 0),
+    breaks = seq(1, 52, length = 12),
+    labels = c(
+      "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    )
+  ) +
+  theme(
+  axis.title = element_blank(),
+  axis.ticks = element_blank(), 
+  axis.text.y = element_text(size = 7),
+  panel.grid = element_blank(),
+  aspect.ratio = 1/7,
+  legend.key.width = unit(1, "cm"),
+  strip.text = element_text(hjust = 0.00, face = "bold", size = 12)
+  )
+  
+
 ```
 
 
