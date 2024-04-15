@@ -82,14 +82,6 @@ plot_ly(
 ```
 
 ```{r}
-gdf %>% group_by(Date = paste0(year(Date), "-", month(Date))) %>%
-  summarise(Load = mean(Load)) %>% as_tibble %>%
-  plot_ly() %>%
-  add_bars(
-    x = ~factor(Date, levels = factor(paste0(rep(2021:2022, each = 12),"-", 1:12))),
-    y = ~Load
-  )
-
 gdf %>% group_by(Date = paste0(year(Date), "-", week(Date))) %>%
   summarise(Load = mean(Load)) %>% as_tibble %>%
   plot_ly() %>%
@@ -97,6 +89,52 @@ gdf %>% group_by(Date = paste0(year(Date), "-", week(Date))) %>%
     x = ~factor(Date, levels = factor(paste0(rep(2021:2022, each = 52),"-", 1:52))),
     y = ~Load
   )
+
+gdf %>% group_by(Date = paste0(year(Date), "-", week(Date))) %>%
+  summarise(Load = mean(Load)) %>% as_tibble %>%
+  e_charts(
+    Date
+  ) %>%
+  e_bar(
+    Load
+  )
+
+
+gdf %>% group_by(Date) %>%
+  summarise(Load = mean(Load)) %>%
+  e_charts(
+    Date
+  ) %>%
+  e_bar(
+    Load
+  ) %>%
+  e_legend(show = F)
+
+gdf %>% 
+  select(Date, Weight) %>%
+  group_by(Date) %>%
+  summarise(
+    max = max(Weight, na.rm = T),
+    min = min(Weight, na.rm = T)
+  ) %>%
+  ggplot() +
+  geom_segment(aes(
+    x = Date, xend = Date,
+    y = min, yend = max
+  ), size = 3, color = "gray") +
+  geom_point(aes(
+    x = Date, y = min
+  ), size = 3.5, color = "#ff6565") +
+  geom_point(aes(
+    x = Date, y = max
+  ), size = 3.5, color = "#4868f9") +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 90)
+  ) -> p
+
+
+plotly::ggplotly(p)
 ```
   
 ```{r}
@@ -288,6 +326,31 @@ gdf %>%
 
 ```
 
+```{r}
+gdf %>%
+  ggplot(aes(
+    x = Weight,
+    y = Load,
+    size = Rep,
+    color = Type
+  )) +
+  geom_point()
+
+gdf %>%
+  group_by_all() %>%
+  summarise(
+    Set = n(),
+    Total = Rep * Set
+  ) %>%
+  ungroup() %>%
+  group_by(Year) %>%
+  e_chart(Weight) %>%
+  e_scatter(
+    Load, 
+    size = Total
+  ) %>%
+  e_tooltip()
+```
 
 
 
