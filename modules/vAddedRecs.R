@@ -10,11 +10,15 @@ servervAddedRecs <- function(id, data, isLogged, userEntered) {
   moduleServer(id, function(input, output, session) {
     # Data
     backlogData <- reactiveVal()
+    wasFetched <- reactiveVal(value = F)
     # load data from server on start up
     observe({
       req(userEntered()$accept)
       if (userEntered()$accept == 1) {
-        backlogData(data())
+        backlogData(
+          data() %>%
+            mutate(Date = as.Date(Date, format = "%Y-%m-%d"))
+        )
       }
       # combine entered data + backlog
       isolate(
@@ -22,16 +26,64 @@ servervAddedRecs <- function(id, data, isLogged, userEntered) {
           rbind(
             backlogData(),
             data.frame(
-              ID = max(backlogData()$ID, na.rm = T) + 1,
+              ID = max(
+                mongo(collection = config$mongoCollGym, url = mongo_uri)$find()$ID, na.rm = T,
+                backlogData()$ID
+              ) + 1,
               Name = userEntered()$excercise,
               Weight = userEntered()$weight,
-              Date = Sys.Date(),
-              Sets = userEntered()$sets,
-              Reps = userEntered()$reps
+              Date = as.Date(userEntered()$date, origin = "1970-01-01"),
+              Rep = userEntered()$reps
             )
           )
         )
       )
+    })
+    
+    # Sidebar buttons management
+    observeEvent(NS(input$undo, "ui"), {
+      req(backlogData())
+      nRows  <- nrow(backlogData())
+      if (nRows > 1) {
+        backlogData(
+          backlogData()[-nRows, ]
+        )
+      }
+    })
+    
+    observeEvent(NS(input$clear, "ui"), {
+      req(backlogData())
+      nRows  <- nrow(backlogData())
+      backlogData(
+        backlogData()[1,]
+      )
+    })
+    
+    observeEvent(NS(input$add, "ui"), {
+      req(input$add)
+      req(backlogData())
+      
+      # Check the nrow to validate insert
+      nRowOld <- nrow(mongo(collection = config$mongoCollGym, url = mongo_uri)$find())
+      mongo(collection = config$mongoCollGym, url = mongo_uri)$insert(
+        backlogData() %>% filter(ID != 0)
+      )
+      nRowNew <- nrow(mongo(collection = config$mongoCollGym, url = mongo_uri)$find())
+      print(nRowNew)
+      print(nRowOld)
+      if (nRowNew == nRowOld) {
+        showNotification(
+          "Something went wrong! Data was not uploaded to MongoDB, please reload the webpage.",
+          action = a(href = "javascript:location.reload();", "Reload page")
+        )
+        return()
+      }
+      
+      showNotification(
+        "Data Successfuly Uploaded to MongoDB",
+         #action = a(href = "javascript:location.reload();", "Reload page")
+      )
+      return(wasFetched(T))
     })
     
     # UI output
@@ -45,9 +97,9 @@ servervAddedRecs <- function(id, data, isLogged, userEntered) {
           open = F,
           sidebar = sidebar(
             width = 160,
-            actionButton("add", "Add"),
-            actionButton("undo", "Undo"),
-            actionButton("clear", "Clear")
+            actionButton(ns("add"), "Add"),
+            actionButton(ns("undo"), "Undo"),
+            actionButton(ns("clear"), "Clear")
           ),
           reactableOutput(ns("table"))
         )

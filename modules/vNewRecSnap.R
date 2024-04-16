@@ -20,7 +20,7 @@ servervNewRecSnap <- function(id, data, isLogged, newRecord) {
     output$chart <- renderEcharts4r({
       my_scale_small <- function(x) scales::rescale(x, to = c(10, 20))
       my_scale_large <- function(x) scales::rescale(x, to = c(30, 30))
-      new <- newRecord()$weight * newRecord()$sets * newRecord()$reps
+      new <- newRecord()$weight * newRecord()$reps
       
       data() %>% 
         filter(

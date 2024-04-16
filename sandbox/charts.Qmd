@@ -27,6 +27,14 @@ config <- config::get(config = "default")
 gdf <- mongo(collection = config$mongoCollGym, url = mongo_uri)$find() 
 ```
 
+```{r}
+# x <- mongo(collection = config$mongoCollUserGym, url = mongo_uri)$find()
+# 
+# mongo(collection = config$mongoCollUserGym, url = mongo_uri)$insert(x[1,])
+# mongo(collection = config$mongoCollUserGym, url = mongo_uri)$drop()
+```
+
+
 ![](images/Zrzut ekranu 2023-07-16 011543-02.png)
 
 

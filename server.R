@@ -33,7 +33,7 @@ server <- function(input, output, session) {
   
   ### Processing modules server side
   observe({
-    dataList$enteredInput <- 
+    dataList$enteredData <- 
       servervEnterData(
         "EnterData1",
         reactive(dataList$main), reactive(userCred())
@@ -42,16 +42,16 @@ server <- function(input, output, session) {
   servervNewRecSnap(
     "EnterData2",
     reactive(dataList$main), reactive(userCred()),
-    reactive(dataList$enteredInput)
+    reactive(dataList$enteredData)
   )
   servervProgressBox(
     "EnterData3",
     reactive(userCred())
   )
-  servervAddedRecs(
+  dataList$fetchingTrigger <- servervAddedRecs(
     "EnterData4",
     reactive(dataList$user), reactive(userCred()),
-    reactive(dataList$enteredInput)
+    reactive(dataList$enteredData)
   )
   servervAIRecom(
     "EnterData5",
