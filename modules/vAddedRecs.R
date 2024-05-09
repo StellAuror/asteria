@@ -33,7 +33,10 @@ servervAddedRecs <- function(id, data, isLogged, userEntered) {
               Name = userEntered()$excercise,
               Weight = userEntered()$weight,
               Date = as.Date(userEntered()$date, origin = "1970-01-01"),
-              Rep = userEntered()$reps
+              Rep = userEntered()$reps,
+              Load = userEntered()$weight * userEntered()$reps,
+              Type = userEntered()$type,
+              Year = year(as.Date(userEntered()$date, origin = "1970-01-01"))
             )
           )
         )
@@ -76,14 +79,14 @@ servervAddedRecs <- function(id, data, isLogged, userEntered) {
           "Something went wrong! Data was not uploaded to MongoDB, please reload the webpage.",
           action = a(href = "javascript:location.reload();", "Reload page")
         )
-        return()
+        return(F)
       }
       
       showNotification(
         "Data Successfuly Uploaded to MongoDB",
          #action = a(href = "javascript:location.reload();", "Reload page")
       )
-      return(wasFetched(T))
+      return(getData("init"))
     })
     
     # UI output
@@ -109,7 +112,7 @@ servervAddedRecs <- function(id, data, isLogged, userEntered) {
     output$table <- renderReactable({
       req(backlogData())
       backlogData() %>% filter(ID != 0) %>%
-        mutate(Load = Weight * Reps * Sets) %>%
+        select(-Year) %>%
         reactable(
           defaultSorted = 'ID',
           defaultPageSize = 8,
@@ -166,7 +169,7 @@ servervAddedRecs <- function(id, data, isLogged, userEntered) {
                 opacity = 0.8
               )
             ),
-            Reps = colDef(
+            Rep = colDef(
               name = "Reps Done",
               maxWidth = 150, 
               align = 'center',
@@ -178,20 +181,20 @@ servervAddedRecs <- function(id, data, isLogged, userEntered) {
                 icon_size = 12,
                 icon = 'dumbbell'
               )
-            ),
-            Sets = colDef(
-              name = "Reps Done",
-              maxWidth = 150, 
-              align = 'center',
-              cell = icon_assign(
-                data = .,
-                fill_color = '#4361ee',
-                empty_color = '#0c0223',
-                empty_opacity = 0.8,
-                icon_size = 12,
-                icon = 'dumbbell'
-              )
-            )
+            )#,
+            #Sets = colDef(
+            #  name = "Reps Done",
+            #  maxWidth = 150, 
+            #  align = 'center',
+            #  cell = icon_assign(
+            #    data = .,
+            #    fill_color = '#4361ee',
+            #    empty_color = '#0c0223',
+            #    empty_opacity = 0.8,
+            #    icon_size = 12,
+            #    icon = 'dumbbell'
+            #  )
+            #)
           )
         ) 
     })

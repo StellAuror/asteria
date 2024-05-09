@@ -25,9 +25,11 @@ mongodb datasource
 ```{r}
 config <- config::get(config = "default")
 gdf <- mongo(collection = config$mongoCollGym, url = mongo_uri)$find() 
+
 ```
 
 ```{r}
+
 # x <- mongo(collection = config$mongoCollUserGym, url = mongo_uri)$find()
 # 
 # mongo(collection = config$mongoCollUserGym, url = mongo_uri)$insert(x[1,])
@@ -152,7 +154,7 @@ my_scale_large <- function(x) scales::rescale(x, to = c(30, 30))
 
   gdf %>%
     filter(
-      Name == "Wyciskanie",
+      Name == "Przysiady",
       Weight <= quantile(Weight, .75) + IQR(Weight) * .5,
       Weight >= quantile(Weight, .25) - IQR(Weight) * .5
     ) %>%
@@ -360,5 +362,8 @@ gdf %>%
   e_tooltip()
 ```
 
+```{r}
+gdf %>% head
+```
 
 

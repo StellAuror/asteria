@@ -7,10 +7,22 @@ server <- function(input, output, session) {
   dataList <- reactiveValues()
   userCred <- reactiveVal() 
   observe({
-    list <- getData("init")
+    print("refresh data")
     
-    dataList$main <- list[["gD"]]
-    dataList$user <- list[["uD"]]
+    initialData <- getData("init")
+    enteredData <- servervAddedRecs(
+      "EnterData4",
+      reactive(dataList$user), reactive(userCred()),
+      reactive(dataList$enteredData)
+    )
+    
+    if (!is.data.frame(enteredData)) {
+      dataList$main <- initialData[["gD"]]
+    } else {
+      dataList$main <- enteredData
+    }
+    
+    dataList$user <- initialData[["uD"]]
     
     #userCred(credentials()$user_auth)
     userCred(TRUE)
@@ -48,11 +60,7 @@ server <- function(input, output, session) {
     "EnterData3",
     reactive(userCred())
   )
-  dataList$fetchingTrigger <- servervAddedRecs(
-    "EnterData4",
-    reactive(dataList$user), reactive(userCred()),
-    reactive(dataList$enteredData)
-  )
+
   servervAIRecom(
     "EnterData5",
     reactive(userCred())

@@ -25,8 +25,8 @@ servervNewRecSnap <- function(id, data, isLogged, newRecord) {
       data() %>% 
         filter(
           Name == newRecord()$excercise,
-          Weight <= quantile(Weight, .75) + IQR(Weight) * .5,
-          Weight >= quantile(Weight, .25) - IQR(Weight) * .5
+          #Weight <= quantile(Weight, .75) + IQR(Weight) * .5,
+          #Weight >= quantile(Weight, .25) - IQR(Weight) * .5
         ) %>%
         arrange(ID) %>%
         mutate(
@@ -35,6 +35,9 @@ servervNewRecSnap <- function(id, data, isLogged, newRecord) {
           new_record_size = if_else(row_number() == round(max(row) / 2, 0), 10, 1),
           normalized_weight = log((max(Weight) - Weight) / (max(Weight) - min(Weight)))
         ) %>%
+        group_by(Date) %>%
+        mutate(Set = n()) %>%
+        ungroup() %>%
         e_charts(Date) %>%
         e_line(Load, color = '#4361ee', lineStyle = list(width = 3)) %>%
         e_scatter(Load, normalized_weight, scale = my_scale_small) %>%
@@ -47,7 +50,7 @@ servervNewRecSnap <- function(id, data, isLogged, newRecord) {
       }'
         ) %>%
         e_tooltip() %>%
-        e_bar(Weight, y_index = 1,  color = '#bbbbbb')
+        e_bar(Set, y_index = 1,  color = '#bbbbbb')
     })
   }
   )

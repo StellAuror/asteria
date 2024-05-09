@@ -11,6 +11,10 @@ uivEnterData <- function(id) {
           ns("excercise"), "Excercise name", unique(data()$Name),
           options = list(create = T), width = "100%"
         ),
+        selectizeInput(
+          ns("type"), "Type", c("Dumbell", "Bar", "Other"),
+          options = list(create = T), width = "100%"
+        ),
         numericInput(
           ns("weight"), "Weight",
           100, 0, 200, .25,
@@ -28,7 +32,6 @@ uivEnterData <- function(id) {
           ),
           dateInput(ns("date"), "Pick date")
         ),
-        
         actionButton(ns("accept"), "Enter")
       )
     )
@@ -56,9 +59,9 @@ servervEnterData <- function(id, data, isLogged) {
         returnList$excercise <- input$excercise
         returnList$accept <- input$accept
         returnList$date <- input$date
+        returnList$type <- input$type
       })
       return(returnList)
-
     }
   )
 }

@@ -1,6 +1,7 @@
 ### Server (no ui)
 getData <- function(id, path) {
   moduleServer(id, function(input, output, session) {
+    print("getting data...")
     # Main gym data from mongoDB cloud service
     gdf <- mongo(collection = config$mongoCollGym, url = mongo_uri)$find() 
     
