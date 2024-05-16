@@ -9,6 +9,7 @@ uivAddedRecs <- function(id) {
 servervAddedRecs <- function(id, data, isLogged, userEntered) {
   moduleServer(id, function(input, output, session) {
     # Data
+    newData <- reactiveVal()
     backlogData <- reactiveVal()
     wasFetched <- reactiveVal(value = F)
     # load data from server on start up
@@ -72,8 +73,6 @@ servervAddedRecs <- function(id, data, isLogged, userEntered) {
         backlogData() %>% filter(ID != 0)
       )
       nRowNew <- nrow(mongo(collection = config$mongoCollGym, url = mongo_uri)$find())
-      print(nRowNew)
-      print(nRowOld)
       if (nRowNew == nRowOld) {
         showNotification(
           "Something went wrong! Data was not uploaded to MongoDB, please reload the webpage.",
@@ -86,7 +85,13 @@ servervAddedRecs <- function(id, data, isLogged, userEntered) {
         "Data Successfuly Uploaded to MongoDB",
          #action = a(href = "javascript:location.reload();", "Reload page")
       )
-      return(getData("init"))
+      ### send data to mongoDB
+      newData(getData("init")[["gD"]])
+      ### Clear table
+      nRows  <- nrow(backlogData())
+      backlogData(
+        backlogData()[1,]
+      )
     })
     
     # UI output
@@ -198,6 +203,7 @@ servervAddedRecs <- function(id, data, isLogged, userEntered) {
           )
         ) 
     })
+    return(newData)
   }
   )
 }

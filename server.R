@@ -6,26 +6,26 @@ server <- function(input, output, session) {
   ### Loading Data into app
   dataList <- reactiveValues()
   userCred <- reactiveVal() 
+  
+  
   observe({
-    print("refresh data")
-    
+    print("Inital refresh")
     initialData <- getData("init")
-    enteredData <- servervAddedRecs(
-      "EnterData4",
-      reactive(dataList$user), reactive(userCred()),
-      reactive(dataList$enteredData)
-    )
     
-    if (!is.data.frame(enteredData)) {
-      dataList$main <- initialData[["gD"]]
-    } else {
-      dataList$main <- enteredData
-    }
-    
+    dataList$main <- initialData[["gD"]]
     dataList$user <- initialData[["uD"]]
     
     #userCred(credentials()$user_auth)
     userCred(TRUE)
+  })
+  
+  observe({
+    print("Attempt to refresh...")
+    print(freshData())
+    if (is.data.frame(freshData())) {
+      print("Data refreshed")
+      dataList$main <- freshData()
+    } else {print("Hesitate with refreshing")}
   })
   
   ### Login
@@ -58,7 +58,14 @@ server <- function(input, output, session) {
   )
   servervProgressBox(
     "EnterData3",
-    reactive(userCred())
+    reactive(dataList$main), reactive(userCred()),
+    reactive(dataList$enteredData)
+  )
+  
+  freshData <- servervAddedRecs(
+    "EnterData4",
+    reactive(dataList$user), reactive(userCred()),
+    reactive(dataList$enteredData)
   )
 
   servervAIRecom(

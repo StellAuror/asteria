@@ -20,7 +20,7 @@ servervNewRecSnap <- function(id, data, isLogged, newRecord) {
     output$chart <- renderEcharts4r({
       my_scale_small <- function(x) scales::rescale(x, to = c(10, 20))
       my_scale_large <- function(x) scales::rescale(x, to = c(30, 30))
-      new <- newRecord()$weight * newRecord()$reps
+      new <- newRecord()$weight
       
       data() %>% 
         filter(
@@ -31,7 +31,7 @@ servervNewRecSnap <- function(id, data, isLogged, newRecord) {
         arrange(ID) %>%
         mutate(
           row = row_number(),
-          new_record = if_else(row_number() == round(max(row) / 2, 0), new, NA),
+          `Planned Training (Weight)` = if_else(row_number() == round(max(row) / 2, 0), new, NA),
           new_record_size = if_else(row_number() == round(max(row) / 2, 0), 10, 1),
           normalized_weight = log((max(Weight) - Weight) / (max(Weight) - min(Weight)))
         ) %>%
@@ -39,9 +39,9 @@ servervNewRecSnap <- function(id, data, isLogged, newRecord) {
         mutate(Set = n()) %>%
         ungroup() %>%
         e_charts(Date) %>%
-        e_line(Load, color = '#4361ee', lineStyle = list(width = 3)) %>%
-        e_scatter(Load, normalized_weight, scale = my_scale_small) %>%
-        e_scatter(new_record, size = new_record_size, scale = my_scale_large) %>%
+        e_line(Weight, color = '#4361ee', lineStyle = list(width = 3)) %>%
+        e_scatter(Weight, normalized_weight, scale = my_scale_small) %>%
+        e_scatter(`Planned Training (Weight)`, size = new_record_size, scale = my_scale_large) %>%
         e_theme_custom(
           '{
       "backgroundColor": ["#ffffff"],
@@ -50,7 +50,7 @@ servervNewRecSnap <- function(id, data, isLogged, newRecord) {
       }'
         ) %>%
         e_tooltip() %>%
-        e_bar(Set, y_index = 1,  color = '#bbbbbb')
+        e_bar(Load, y_index = 1,  color = '#bbbbbb')
     })
   }
   )
