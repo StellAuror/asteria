@@ -9,6 +9,7 @@
   library(reactable)
   library(reactablefmtr)
   library(bsicons)
+  library(plotly)
   library(glue)
   # library(config) - better to use namespace:: due to the conflicting funs
   library(mongolite)
@@ -19,20 +20,23 @@
   )
 ```
 
-
 ## Data
-mongodb datasource
 ```{r}
 config <- config::get(config = "default")
-gdf <- mongo(collection = config$mongoCollGym, url = mongo_uri)$find() 
+gdf <- mongo(collection = config$mongoCollGym, url = mongo_uri)$find() |>
+  mutate(Date = as.Date(Date, format = "%Y-%m-%d"))
+
 
 ```
 
 ```{r}
 
-# x <- mongo(collection = config$mongoCollUserGym, url = mongo_uri)$find()
-# 
-# mongo(collection = config$mongoCollUserGym, url = mongo_uri)$insert(x[1,])
+# mongo(collection = config$mongoCollGym, url = mongo_uri)$find()
+# mongo(collection = config$mongoCollGym, url = mongo_uri)$insert(training_data)
+# mongo(collection = config$mongoCollGym, url = mongo_uri)$drop()
+
+# x <- mongo(collection = config$mongoCollGym, url = mongo_uri)$find()[1,]
+# mongo(collection = config$mongoCollUserGym, url = mongo_uri)$insert(x)
 # mongo(collection = config$mongoCollUserGym, url = mongo_uri)$drop()
 ```
 
@@ -42,53 +46,25 @@ gdf <- mongo(collection = config$mongoCollGym, url = mongo_uri)$find()
 
 ## Chart I - Sunflower overview
 ```{r}
-# Power
-sf_data <-
-  gdf %>%
-  group_by_all() %>%
-  summarise(Set = n()) %>%
-  ungroup() %>%
-  group_by(year(Date)) %>%
-  summarise(
-    power = mean(Load), # average load
-    strength = max(Load), # max laod
-    durability = sum(Set * Rep), # total reps
-    intensivity = sum(Rep) / sum(Set), # proportion reps to sets
-    variety = max(summarise(group_by(gdf, Date), n = n())[[2]]), # variety of excercises
-    musclnity = sum(Load) # total load
-  ) %>% sapply(., function(x) round(x, 2))
+total_load <- sum(gdf$Load)
+power <- total_load / total_reps
+durability <- mean(gdf$Rep)
+intensity <- mean(gdf$Weight)
 
-sf_data <- sf_data[1,-1] / sf_data[2,-1] 
-sf_data[length(sf_data) + 1] <- sf_data[1]
-names(sf_data) <- c(names(sf_data)[-length(sf_data)], names(sf_data)[1])
+# 6. Calculate Balance (Distribution of exercises across muscle groups)
+balance <- gdf |> 
+  group_by(MuscleGroup) |> 
+  summarise(ExerciseCount = n()) |> 
+  mutate(Percentage = ExerciseCount / sum(ExerciseCount) * 100) 
 
 
-plot_ly(
-    type = 'scatterpolar',
-    fill = 'toself',
-    fillcolor = 'rgba(168, 216, 234, 0.8)',
-    marker = list(
-      color = '#698087',
-      width = 3
-    ),
-    line = list(
-      color = '#698087',
-      width = 3
-    )
-  ) %>%
-  add_trace(
-    r = sf_data,
-    theta = names(sf_data),
-    name = 'Group A'
-  )  %>%
-  layout(
-    polar = list(
-      radialaxis = list(
-        visible = T,
-        range = c(0,1.2)
-      )
-    )
-  ) %>% hide_legend()
+balance |> 
+  e_charts(MuscleGroup) |> 
+  e_polar() |> 
+  e_angle_axis(MuscleGroup) |> # angle = x
+  e_radius_axis() |> 
+  e_bar(Percentage, coord_system = "polar") |>
+  e_scatter(Percentage, coord_system = "polar")
 ```
 
 ```{r}
@@ -122,6 +98,7 @@ gdf %>% group_by(Date) %>%
 
 gdf %>% 
   select(Date, Weight) %>%
+  mutate(Date = factor(paste0(year(Date), month(Date)))) %>%
   group_by(Date) %>%
   summarise(
     max = max(Weight, na.rm = T),
@@ -131,13 +108,13 @@ gdf %>%
   geom_segment(aes(
     x = Date, xend = Date,
     y = min, yend = max
-  ), size = 3, color = "gray") +
+  ), size = 2, color = "#dddddd") +
   geom_point(aes(
     x = Date, y = min
-  ), size = 3.5, color = "#ff6565") +
+  ), size = 4.5, color = "#ff6565") +
   geom_point(aes(
     x = Date, y = max
-  ), size = 3.5, color = "#4868f9") +
+  ), size = 4.5, color = "#4868f9") +
   theme_minimal() +
   theme(
     axis.text.x = element_text(angle = 90)
@@ -154,24 +131,27 @@ my_scale_large <- function(x) scales::rescale(x, to = c(30, 30))
 
   gdf %>%
     filter(
-      Name == "Przysiady"
+      Name == "Squats"
     ) %>%
     arrange(ID) %>%
+    group_by(Date) %>%
+    mutate(Set = n()) %>% ungroup %>%
+    group_by(Date) %>%
+    summarise(
+      Set = mean(Set),
+      Weight = mean(Weight),
+      Load = mean(Load),
+      Rep = mean(Rep)
+    ) %>% 
     mutate(
       row = row_number(),
-      new_record = if_else(row_number() == round(max(row) / 2, 0), 2100, NA),
+      new_record = if_else(row_number() == round(max(row) / 2, 0), 50, NA),
       new_record_size = if_else(row_number() == round(max(row) / 2, 0), 10, 1),
-      normalized_weight = log((max(Weight) - Weight) / (max(Weight) - min(Weight)))
-    ) %>%
-    group_by(Name, Year, Type, Date) %>%
-    summarise(
-      Weight = mean(Weight),
-      Load = sum(Rep * Weight),
-      Sets = n()
-    ) %>%
+      normalized_weight = ((max(Weight) - Weight) / (max(Weight) - min(Weight)))
+    ) %>% 
     e_charts(Date) %>%
-    e_line(Load, color = '#4361ee', lineStyle = list(width = 3)) %>%
-    e_scatter(Load, normalized_weight, scale = my_scale_small) %>%
+    e_line(Weight, color = '#4361ee', lineStyle = list(width = 3)) %>%
+    e_scatter(Weight, normalized_weight, scale = my_scale_small) %>%
     e_scatter(new_record, size = new_record_size, scale = my_scale_large) %>%
     e_theme_custom(
       '{
@@ -180,12 +160,13 @@ my_scale_large <- function(x) scales::rescale(x, to = c(30, 30))
       "legend":{"textStyle": {"color": "#676971"}}
       }'
     ) %>%
-    e_tooltip() %>%
-    e_bar(Sets, y_index = 1,  color = '#bbbbbb')
+  e_bar(Load, y_index = 1,  color = '#bbbbbb') %>%
+  e_tooltip()
 ```
+
 ```{r}
 
-gdf %>%
+gdf[1:10,] %>%
 group_by_all() %>%
 summarise(Set = n()) %>%
 ungroup() %>%
@@ -283,7 +264,7 @@ wdOrder <- c("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun") %>% rev
 
 
 
-gdf %>%
+plot <- gdf %>%
   select(Date) %>%
   mutate(Date = as.Date(Date, format = "%Y-%m-%d")) %>%
   group_by(Date) %>%
@@ -338,36 +319,164 @@ gdf %>%
   )
   
 
+
+p <- gdf |> 
+  group_by(Date) |>
+  summarise(n = n()) |>
+  dplyr::mutate(Y = format(Date, "%Y")) |> # get year from date
+  group_by(Y) |> 
+  e_charts(Date) |> 
+  e_calendar(range = "2021",top = "40") |> 
+  e_calendar(range = "2022",top = "260") |> 
+  e_heatmap(n, coord_system = "calendar") |> 
+  e_visual_map(max = 30) |> 
+  e_title("Calendar", "Heatmap") |>
+  e_tooltip("item") 
+
+ui <- fluidPage(
+  echarts4rOutput("p")
+)
+
+server <- function(input, output, session) {
+  output$p <- renderEcharts4r({
+    p
+  })
+  
+   observeEvent(input$p_clicked_data, {
+     print(input$p_clicked_data)
+   })
+}
+
+shinyApp(ui, server)
+
 ```
 
 ```{r}
-gdf %>%
-  ggplot(aes(
-    x = Weight,
-    y = Load,
-    size = Rep,
-    color = Type
-  )) +
-  geom_point()
+max <- list(
+  name = "Max",
+  type = "max"
+)
 
-gdf %>%
-  group_by_all() %>%
+min <- list(
+  name = "Min",
+  type = "min"
+)
+
+avg <- list(
+  type = "average",
+  name = "AVG"
+)
+
+gdf |>
+  group_by_all() |>
   summarise(
     Set = n(),
     Total = Rep * Set
-  ) %>%
-  ungroup() %>%
-  group_by(Year) %>%
-  e_chart(Weight) %>%
+  ) |>
+  ungroup() |>
+  group_by(Year) |>
+  e_chart(Load) |>
   e_scatter(
-    Load, 
-    size = Total
-  ) %>%
-  e_tooltip()
+    Weight, size = Total, 
+    itemStyle = list(opacity = 0.6)
+  ) |>
+  e_tooltip() |>
+  e_color(c("#5662f6", "#382365")) |>
+  e_mark_point(data = max) |> 
+  e_mark_point(data = min) |> 
+  e_mark_point(data = avg)
 ```
+
+
 
 ```{r}
-gdf %>% head
+ggplot(training_data, aes(x = Rep)) +
+  geom_histogram(binwidth = 1, fill = "skyblue", color = "black") +
+  labs(title = "Distribution of Reps", x = "Reps", y = "Frequency") +
+  theme_minimal()
+
+training_data %>%
+  group_by(Name) %>%
+  summarise(TotalLoad = sum(Load)) %>%
+  ggplot(aes(x = reorder(Name, TotalLoad), y = TotalLoad, fill = Name)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Total Load by Exercise", x = "Exercise", y = "Total Load (kg)") +
+  theme_minimal()
+
+training_data %>%
+  group_by(Type) %>%
+  summarise(TotalLoad = sum(Load)) %>%
+  ggplot(aes(x = reorder(Type, TotalLoad), y = TotalLoad, fill = Type)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Total Load by Exercise Type", x = "Exercise Type", y = "Total Load (kg)") +
+  theme_minimal()
+
+
+```
+```{r}
+# Extract month and week from Date
+training_data <- training_data %>%
+  mutate(Month = month(Date, label = TRUE),
+         Week = week(Date))
+
+# Monthly total load
+monthly_load <- training_data %>%
+  group_by(Month) %>%
+  summarise(TotalLoad = sum(Load), .groups = 'drop') %>%
+  arrange(Month)
+
+# Weekly total load
+weekly_load <- training_data %>%
+  group_by(Week) %>%
+  summarise(TotalLoad = sum(Load), .groups = 'drop') %>%
+  arrange(Week)
+
+# Plot seasonal trends
+ggplot(monthly_load, aes(x = Month, y = TotalLoad)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Monthly Total Load", x = "Month", y = "Total Load (kg)") +
+  theme_minimal()
+
+ggplot(weekly_load, aes(x = Week, y = TotalLoad)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Weekly Total Load", x = "Week", y = "Total Load (kg)") +
+  theme_minimal()
+
+
+```
+```{r}
+gdf |>
+  e_charts() |> 
+  e_histogram(serie = Rep, name = "histogram", legend = F) |> 
+  e_tooltip(trigger = "axis") 
+
+gdf |>
+  e_charts() |> 
+  e_histogram(serie = Load, name = "histogram", legend = F) |> 
+  e_tooltip(trigger = "axis") 
+
+gdf |>
+  e_charts() |> 
+  e_histogram(serie = Weight, name = "histogram", legend = F) |> 
+  e_tooltip(trigger = "axis")
+
+gdf |>
+  filter(Name == "Squats") |>
+  mutate(DateNumeric = as.numeric(Date - min(Date))) |>
+  arrange(DateNumeric) |>
+  e_charts(Date) |>
+  e_scatter(Load, size = Weight, name = "Training Load", color = "#5662f6", itemStyle = list(opacity = 0.9), symbol_size = 4) |>
+  e_loess(Load ~ DateNumeric, name = "Progress Curve", lineStyle = list(width = 5), itemStyle =  list(opacity = 0)) |>
+  e_theme("inspired")
+
+
 ```
 
+
+```{r}
+
+
+```
 

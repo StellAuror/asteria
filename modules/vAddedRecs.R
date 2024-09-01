@@ -16,8 +16,9 @@ servervAddedRecs <- function(id, data, isLogged, userEntered) {
     observe({
       req(userEntered()$accept)
       if (userEntered()$accept == 1) {
+        print(data())
         backlogData(
-          data() %>%
+          data() |>
             mutate(Date = as.Date(Date, format = "%Y-%m-%d"))
         )
       }
@@ -116,7 +117,7 @@ servervAddedRecs <- function(id, data, isLogged, userEntered) {
     # Reactable output
     output$table <- renderReactable({
       req(backlogData())
-      backlogData() %>% filter(ID != 0) %>%
+      backlogData() %>% filter(ID != 1) %>%
         select(-Year) %>%
         reactable(
           defaultSorted = 'ID',

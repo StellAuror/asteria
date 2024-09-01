@@ -13,6 +13,8 @@ servervProgressBox <- function(id, data, isLogged, newRecord) {
         req(newRecord())
         req(data())
         
+        if (is.null(newRecord()$excercise)) return()
+        
         paste0(round(newRecord()$weight / (
           data() %>% 
             filter(
@@ -33,18 +35,19 @@ servervProgressBox <- function(id, data, isLogged, newRecord) {
         
         tagList(
           value_box(
-            title = div("Progress", style = "font-weight: 500; font-size: 30px"),
+            title = div("Force Progression", style = "font-weight: 500; font-size: 30px"),
             value = div(force, style = "font-weight: 900; font-size: 54px"),
             fill = F,
             theme = value_box_theme(bg = "#fff", fg = "#4361ee"),
-            showcase = icon("dumbbell"), "correlates with the strength and force progress"
+            showcase = icon("dumbbell"), "correlates with the strength progress"
           ),
           value_box(
-            title = div("Progress", style = "font-weight: 500; font-size: 30px"),
+            title = div("Energy Progression", style = "font-weight: 500; font-size: 30px"),
             value = div(power, style = "font-weight: 900; font-size: 54px"),
             fill = F,
-            theme = value_box_theme(bg = "#fff", fg = "#515151"),
-            showcase = icon("fire"), "correlates with the speed and power progress"
+            theme = value_box_theme(bg = "#fff", fg = "#ff6723"),
+            showcase = icon("fire"), "correlates with the speed and power progress",
+            height = "225px"
           )
         )
       })

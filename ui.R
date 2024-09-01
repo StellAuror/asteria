@@ -12,7 +12,7 @@ uiTitle <- tags$span(
 ## Panel - Reference to GitHub Repo
 uiPanelGitHub <- tags$a(
   tags$span(bsicons::bs_icon("code-slash"), "Source code"),
-  href = "https://github.com/",
+  href = "https://github.com/StellAuror/asteria",
   target = "_blank"
 )
 
@@ -25,12 +25,17 @@ ui <- page_navbar(
   title = "Asteria",
   sidebar = sidebar(
     width = 270, position = "left",
-    open = F, bg = "#171717", "left"
+    open = F, bg = "#171717",
+    tagList(
+      useWaiter(),
+      uiOutput("sidebarUI1"),
+      uiOutput("sidebarUI2")
+    )
   ),
   nav_spacer(),
   ### Panel - Entering Data
   nav_panel(
-    "Enter Data",
+    "New Training",
     # add login panel UI function
     shinyauthr::loginUI(id = "login"),
     # First Level
@@ -46,6 +51,10 @@ ui <- page_navbar(
       uivAddedRecs("EnterData4"),
       uivAIRecom("EnterData5")
     )
+  ),
+  nav_panel(
+    "Exercise", 
+    uiDashExercise("dashExercise")
   ),
   ### Panel - Items
   nav_item(uiPanelGitHub),

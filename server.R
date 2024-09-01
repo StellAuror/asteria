@@ -1,7 +1,39 @@
+waiter <- Waiter$new(
+  html = tagList(
+    spin_3(),  
+    h3("Loading...")
+  ),
+  color = "rgba(255,255,255,0.8)"  
+)
+
 server <- function(input, output, session) {
   ### Temporary source() workaround
   modules <- dir("modules", full.names = T, recursive = T)
   lapply(modules, source)
+  
+  ### UI Sidebar
+  output$sidebarUI1 <- renderUI({
+    tagList(
+      selectInput(
+        "sidebarExercise", "Select an exercise",
+        lapply(split(dataList$main$Name, dataList$main$Type), function(x) as.vector(x)) |> lapply(unique)
+      )
+    )
+  })
+  
+  output$sidebarUI2 <- renderUI(
+    histoslider::input_histoslider(
+      "sidebarYear", "", dataList$main |> filter(Name == input$sidebarExercise) |> pull(Date) |> as.Date(format = "%Y-%m-%d")
+    )
+  )
+  
+  sidebarInput <- reactiveValues()
+  
+  observe({
+    "refreshing inputs"
+    sidebarInput$year <- input$sidebarYear |> as.Date(format = "%Y-%m-%d")
+    sidebarInput$exercise <- input$sidebarExercise
+  })
   
   ### Loading Data into app
   dataList <- reactiveValues()
@@ -15,13 +47,12 @@ server <- function(input, output, session) {
     dataList$main <- initialData[["gD"]]
     dataList$user <- initialData[["uD"]]
     
-    #userCred(credentials()$user_auth)
-    userCred(TRUE)
+    userCred(credentials()$user_auth)
+    #userCred(TRUE)
   })
   
   observe({
     print("Attempt to refresh...")
-    print(freshData())
     if (is.data.frame(freshData())) {
       print("Data refreshed")
       dataList$main <- freshData()
@@ -70,7 +101,15 @@ server <- function(input, output, session) {
 
   servervAIRecom(
     "EnterData5",
-    reactive(userCred())
+    reactive(userCred()),
+    reactive(dataList$main),
+    reactive(dataList$enteredData)
+  )
+  
+  serverDashExercise(
+    "dashExercise",
+    reactive(dataList$main),
+    reactive(sidebarInput)#, reactive(userCred())
   )
   
   ### update UI

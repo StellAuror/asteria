@@ -28,7 +28,7 @@ servervNewRecSnap <- function(id, data, isLogged, newRecord) {
           #Weight <= quantile(Weight, .75) + IQR(Weight) * .5,
           #Weight >= quantile(Weight, .25) - IQR(Weight) * .5
         ) %>%
-        arrange(ID) %>%
+        arrange(Date) %>%
         mutate(
           row = row_number(),
           `Planned Training (Weight)` = if_else(row_number() == round(max(row) / 2, 0), new, NA),

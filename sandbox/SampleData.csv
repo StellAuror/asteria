@@ -1,0 +1,1001 @@
+ID,Name,Weight,Rep,Date,Year,Load,Type,MuscleGroup
+1,Squats,60,9,2021-01-01,2021,540,Barbell,Legs
+2,Deadlifts,60,10,2021-01-01,2021,600,Barbell,Legs
+3,Bench Press,40,13,2021-01-01,2021,520,Barbell,Chest
+4,Overhead Press,30,10,2021-01-01,2021,300,Barbell,Shoulders
+5,Barbell Rows,50,10,2021-01-01,2021,500,Barbell,Back
+6,Bicep Curl,20,13,2021-01-01,2021,260,Dumbbell,Arms
+7,Tricep Extension,20,11,2021-01-01,2021,220,Dumbbell,Arms
+8,Leg Press,60,7,2021-01-01,2021,420,Machine,Legs
+9,Pull-Ups,50,9,2021-01-01,2021,450,Bodyweight,Back
+10,Chin-Ups,50,9,2021-01-01,2021,450,Bodyweight,Back
+11,Dips,40,12,2021-01-01,2021,480,Bodyweight,Chest
+12,Push-Ups,40,11,2021-01-01,2021,440,Bodyweight,Chest
+13,Lunges,60,11,2021-01-01,2021,660,Bodyweight,Legs
+14,Plank,15,10,2021-01-01,2021,150,Bodyweight,Core
+15,Leg Raises,15,9,2021-01-01,2021,135,Bodyweight,Core
+16,Sit-Ups,15,14,2021-01-01,2021,210,Bodyweight,Core
+17,Russian Twists,15,11,2021-01-01,2021,165,Bodyweight,Core
+18,Burpees,25,6,2021-01-01,2021,150,Bodyweight,Full Body
+19,Kettlebell Swings,25,11,2021-01-01,2021,275,Kettlebell,Full Body
+20,Farmers Walk,25,9,2021-01-01,2021,225,Dumbbell,Full Body
+21,Squats,58,10,2021-01-08,2021,580,Barbell,Legs
+22,Deadlifts,38.7,9,2021-01-08,2021,348.7,Barbell,Legs
+23,Bench Press,49.2,7,2021-01-08,2021,344.3,Barbell,Chest
+24,Overhead Press,21,10,2021-01-08,2021,210.4,Barbell,Shoulders
+25,Barbell Rows,48.1,13,2021-01-08,2021,624.7,Barbell,Back
+26,Bicep Curl,46.4,7,2021-01-08,2021,324.8,Dumbbell,Arms
+27,Tricep Extension,43.2,10,2021-01-08,2021,432,Dumbbell,Arms
+28,Leg Press,16,10,2021-01-08,2021,159.7,Machine,Legs
+29,Pull-Ups,15.5,4,2021-01-08,2021,62.1,Bodyweight,Back
+30,Chin-Ups,24.5,11,2021-01-08,2021,269.3,Bodyweight,Back
+31,Dips,55.3,11,2021-01-08,2021,608.6,Bodyweight,Chest
+32,Push-Ups,50,10,2021-01-08,2021,500,Bodyweight,Chest
+33,Lunges,52.1,8,2021-01-08,2021,416.4,Bodyweight,Legs
+34,Plank,44.4,11,2021-01-08,2021,488.4,Bodyweight,Core
+35,Leg Raises,14.9,7,2021-01-08,2021,104.6,Bodyweight,Core
+36,Sit-Ups,28.8,9,2021-01-08,2021,259.2,Bodyweight,Core
+37,Russian Twists,28.8,10,2021-01-08,2021,288,Bodyweight,Core
+38,Burpees,16.1,10,2021-01-08,2021,160.7,Bodyweight,Full Body
+39,Kettlebell Swings,31.3,7,2021-01-08,2021,218.9,Kettlebell,Full Body
+40,Farmers Walk,32.5,10,2021-01-08,2021,325.3,Dumbbell,Full Body
+41,Squats,59.8,11,2021-01-15,2021,657.6,Barbell,Legs
+42,Deadlifts,48.9,9,2021-01-15,2021,440.5,Barbell,Legs
+43,Bench Press,46.4,8,2021-01-15,2021,371,Barbell,Chest
+44,Overhead Press,44.3,11,2021-01-15,2021,487.2,Barbell,Shoulders
+45,Barbell Rows,15.8,12,2021-01-15,2021,189.8,Barbell,Back
+46,Bicep Curl,39.6,10,2021-01-15,2021,396,Dumbbell,Arms
+47,Tricep Extension,40.4,5,2021-01-15,2021,202,Dumbbell,Arms
+48,Leg Press,15.9,9,2021-01-15,2021,143.5,Machine,Legs
+49,Pull-Ups,28.3,12,2021-01-15,2021,339.9,Bodyweight,Back
+50,Chin-Ups,31.4,8,2021-01-15,2021,251.3,Bodyweight,Back
+51,Dips,61.2,10,2021-01-15,2021,612.4,Bodyweight,Chest
+52,Push-Ups,47.1,11,2021-01-15,2021,518.2,Bodyweight,Chest
+53,Lunges,15.8,11,2021-01-15,2021,174.1,Bodyweight,Legs
+54,Plank,40.3,11,2021-01-15,2021,443.1,Bodyweight,Core
+55,Leg Raises,30,11,2021-01-15,2021,330,Bodyweight,Core
+56,Sit-Ups,33,10,2021-01-15,2021,330,Bodyweight,Core
+57,Russian Twists,16.1,9,2021-01-15,2021,144.8,Bodyweight,Core
+58,Burpees,29.4,10,2021-01-15,2021,293.6,Bodyweight,Full Body
+59,Kettlebell Swings,16.4,13,2021-01-15,2021,213.1,Kettlebell,Full Body
+60,Farmers Walk,16.2,11,2021-01-15,2021,178,Dumbbell,Full Body
+61,Squats,60.7,11,2021-01-22,2021,668.2,Barbell,Legs
+62,Deadlifts,47.8,14,2021-01-22,2021,668.6,Barbell,Legs
+63,Bench Press,16.1,12,2021-01-22,2021,192.8,Barbell,Chest
+64,Overhead Press,39.7,8,2021-01-22,2021,317.4,Barbell,Shoulders
+65,Barbell Rows,27.9,11,2021-01-22,2021,306.5,Barbell,Back
+66,Bicep Curl,39.6,10,2021-01-22,2021,396,Dumbbell,Arms
+67,Tricep Extension,17.1,14,2021-01-22,2021,239.3,Dumbbell,Arms
+68,Leg Press,31.3,9,2021-01-22,2021,282,Machine,Legs
+69,Pull-Ups,16.5,13,2021-01-22,2021,214.7,Bodyweight,Back
+70,Chin-Ups,16.5,7,2021-01-22,2021,115.8,Bodyweight,Back
+71,Dips,60.8,12,2021-01-22,2021,729.8,Bodyweight,Chest
+72,Push-Ups,17,11,2021-01-22,2021,187.3,Bodyweight,Chest
+73,Lunges,28.9,11,2021-01-22,2021,318.3,Bodyweight,Legs
+74,Plank,18.8,11,2021-01-22,2021,207.2,Bodyweight,Core
+75,Leg Raises,16,9,2021-01-22,2021,144,Bodyweight,Core
+76,Sit-Ups,33.6,8,2021-01-22,2021,268.8,Bodyweight,Core
+77,Russian Twists,29,13,2021-01-22,2021,377.4,Bodyweight,Core
+78,Burpees,16.5,10,2021-01-22,2021,165.2,Bodyweight,Full Body
+79,Kettlebell Swings,28.7,6,2021-01-22,2021,172.1,Kettlebell,Full Body
+80,Farmers Walk,30.6,7,2021-01-22,2021,214.3,Dumbbell,Full Body
+81,Squats,64.2,14,2021-01-29,2021,898.2,Barbell,Legs
+82,Deadlifts,15.3,11,2021-01-29,2021,167.9,Barbell,Legs
+83,Bench Press,28,7,2021-01-29,2021,195.7,Barbell,Chest
+84,Overhead Press,16,7,2021-01-29,2021,111.8,Barbell,Shoulders
+85,Barbell Rows,16.4,7,2021-01-29,2021,114.5,Barbell,Back
+86,Bicep Curl,39.2,12,2021-01-29,2021,470.4,Dumbbell,Arms
+87,Tricep Extension,27.4,12,2021-01-29,2021,329.1,Dumbbell,Arms
+88,Leg Press,14.4,11,2021-01-29,2021,158.9,Machine,Legs
+89,Pull-Ups,29.5,5,2021-01-29,2021,147.3,Bodyweight,Back
+90,Chin-Ups,29.2,10,2021-01-29,2021,291.9,Bodyweight,Back
+91,Dips,60,12,2021-01-29,2021,720.5,Bodyweight,Chest
+92,Push-Ups,27.4,12,2021-01-29,2021,329.1,Bodyweight,Chest
+93,Lunges,16.3,11,2021-01-29,2021,179.2,Bodyweight,Legs
+94,Plank,25.1,6,2021-01-29,2021,150.7,Bodyweight,Core
+95,Leg Raises,30,9,2021-01-29,2021,270,Bodyweight,Core
+96,Sit-Ups,34.8,9,2021-01-29,2021,313.2,Bodyweight,Core
+97,Russian Twists,16.9,11,2021-01-29,2021,185.4,Bodyweight,Core
+98,Burpees,30,10,2021-01-29,2021,299.8,Bodyweight,Full Body
+99,Kettlebell Swings,17,14,2021-01-29,2021,238.6,Kettlebell,Full Body
+100,Farmers Walk,16.5,8,2021-01-29,2021,132.3,Dumbbell,Full Body
+101,Squats,65.6,11,2021-02-05,2021,721.7,Barbell,Legs
+102,Deadlifts,29.2,9,2021-02-05,2021,262.5,Barbell,Legs
+103,Bench Press,15.8,13,2021-02-05,2021,205.1,Barbell,Chest
+104,Overhead Press,27.2,8,2021-02-05,2021,217.6,Barbell,Shoulders
+105,Barbell Rows,29.7,10,2021-02-05,2021,296.8,Barbell,Back
+106,Bicep Curl,41.2,10,2021-02-05,2021,412,Dumbbell,Arms
+107,Tricep Extension,18,8,2021-02-05,2021,143.7,Dumbbell,Arms
+108,Leg Press,33.5,11,2021-02-05,2021,368,Machine,Legs
+109,Pull-Ups,17.8,13,2021-02-05,2021,231.7,Bodyweight,Back
+110,Chin-Ups,16.8,8,2021-02-05,2021,134.5,Bodyweight,Back
+111,Dips,64.8,12,2021-02-05,2021,777.9,Bodyweight,Chest
+112,Push-Ups,15.5,7,2021-02-05,2021,108.3,Bodyweight,Chest
+113,Lunges,33.8,8,2021-02-05,2021,270.6,Bodyweight,Legs
+114,Plank,18.3,10,2021-02-05,2021,183.2,Bodyweight,Core
+115,Leg Raises,16.7,11,2021-02-05,2021,183.8,Bodyweight,Core
+116,Sit-Ups,26.1,8,2021-02-05,2021,208.8,Bodyweight,Core
+117,Russian Twists,24,13,2021-02-05,2021,312,Bodyweight,Core
+118,Burpees,16.8,10,2021-02-05,2021,168.2,Bodyweight,Full Body
+119,Kettlebell Swings,24.5,12,2021-02-05,2021,294.4,Kettlebell,Full Body
+120,Farmers Walk,24.1,8,2021-02-05,2021,192.9,Dumbbell,Full Body
+121,Squats,72.4,9,2021-02-12,2021,651.7,Barbell,Legs
+122,Deadlifts,15.5,8,2021-02-12,2021,124.4,Barbell,Legs
+123,Bench Press,28.2,9,2021-02-12,2021,254.1,Barbell,Chest
+124,Overhead Press,18.7,12,2021-02-12,2021,224.8,Barbell,Shoulders
+125,Barbell Rows,18.8,9,2021-02-12,2021,168.8,Barbell,Back
+126,Bicep Curl,38,9,2021-02-12,2021,342,Dumbbell,Arms
+127,Tricep Extension,31.6,12,2021-02-12,2021,378.6,Dumbbell,Arms
+128,Leg Press,17.6,8,2021-02-12,2021,140.7,Machine,Legs
+129,Pull-Ups,24.2,8,2021-02-12,2021,193.9,Bodyweight,Back
+130,Chin-Ups,24.2,11,2021-02-12,2021,266.1,Bodyweight,Back
+131,Dips,76.7,12,2021-02-12,2021,920,Bodyweight,Chest
+132,Push-Ups,29.6,10,2021-02-12,2021,296,Bodyweight,Chest
+133,Lunges,16.1,11,2021-02-12,2021,176.7,Bodyweight,Legs
+134,Plank,33.3,11,2021-02-12,2021,365.9,Bodyweight,Core
+135,Leg Raises,22.9,11,2021-02-12,2021,252.4,Bodyweight,Core
+136,Sit-Ups,27.9,14,2021-02-12,2021,390.6,Bodyweight,Core
+137,Russian Twists,16.1,7,2021-02-12,2021,113,Bodyweight,Core
+138,Burpees,22.4,11,2021-02-12,2021,246,Bodyweight,Full Body
+139,Kettlebell Swings,16,9,2021-02-12,2021,143.6,Kettlebell,Full Body
+140,Farmers Walk,15.9,10,2021-02-12,2021,158.8,Dumbbell,Full Body
+141,Squats,79.6,10,2021-02-19,2021,796.3,Barbell,Legs
+142,Deadlifts,30.3,11,2021-02-19,2021,333.2,Barbell,Legs
+143,Bench Press,19,7,2021-02-19,2021,132.8,Barbell,Chest
+144,Overhead Press,31.1,9,2021-02-19,2021,279.8,Barbell,Shoulders
+145,Barbell Rows,24.7,13,2021-02-19,2021,321,Barbell,Back
+146,Bicep Curl,44,13,2021-02-19,2021,572,Dumbbell,Arms
+147,Tricep Extension,16.2,6,2021-02-19,2021,97.1,Dumbbell,Arms
+148,Leg Press,22.9,10,2021-02-19,2021,229.1,Machine,Legs
+149,Pull-Ups,17.1,12,2021-02-19,2021,204.8,Bodyweight,Back
+150,Chin-Ups,16.8,7,2021-02-19,2021,117.8,Bodyweight,Back
+151,Dips,84.2,9,2021-02-19,2021,757.6,Bodyweight,Chest
+152,Push-Ups,19.5,10,2021-02-19,2021,194.5,Bodyweight,Chest
+153,Lunges,25.7,10,2021-02-19,2021,257.2,Bodyweight,Legs
+154,Plank,15,11,2021-02-19,2021,164.8,Bodyweight,Core
+155,Leg Raises,17.6,9,2021-02-19,2021,158.1,Bodyweight,Core
+156,Sit-Ups,33.3,12,2021-02-19,2021,399.6,Bodyweight,Core
+157,Russian Twists,27.6,10,2021-02-19,2021,276,Bodyweight,Core
+158,Burpees,18.3,6,2021-02-19,2021,109.6,Bodyweight,Full Body
+159,Kettlebell Swings,27.8,12,2021-02-19,2021,334.1,Kettlebell,Full Body
+160,Farmers Walk,27.6,8,2021-02-19,2021,220.9,Dumbbell,Full Body
+161,Squats,82.9,10,2021-02-26,2021,829.1,Barbell,Legs
+162,Deadlifts,17.9,8,2021-02-26,2021,143.3,Barbell,Legs
+163,Bench Press,26.5,9,2021-02-26,2021,238.7,Barbell,Chest
+164,Overhead Press,14.9,11,2021-02-26,2021,163.5,Barbell,Shoulders
+165,Barbell Rows,17,12,2021-02-26,2021,204.1,Barbell,Back
+166,Bicep Curl,36.4,9,2021-02-26,2021,327.6,Dumbbell,Arms
+167,Tricep Extension,26.4,6,2021-02-26,2021,158.6,Dumbbell,Arms
+168,Leg Press,18.1,12,2021-02-26,2021,217.7,Machine,Legs
+169,Pull-Ups,30.9,13,2021-02-26,2021,401.8,Bodyweight,Back
+170,Chin-Ups,29.4,7,2021-02-26,2021,205.5,Bodyweight,Back
+171,Dips,81.7,9,2021-02-26,2021,734.9,Bodyweight,Chest
+172,Push-Ups,27.8,10,2021-02-26,2021,278.3,Bodyweight,Chest
+173,Lunges,16.3,13,2021-02-26,2021,211.5,Bodyweight,Legs
+174,Plank,27.8,10,2021-02-26,2021,278.1,Bodyweight,Core
+175,Leg Raises,27.9,7,2021-02-26,2021,195.3,Bodyweight,Core
+176,Sit-Ups,25.8,7,2021-02-26,2021,180.6,Bodyweight,Core
+177,Russian Twists,16.7,13,2021-02-26,2021,216.7,Bodyweight,Core
+178,Burpees,28.4,12,2021-02-26,2021,341,Bodyweight,Full Body
+179,Kettlebell Swings,15.5,9,2021-02-26,2021,139.9,Kettlebell,Full Body
+180,Farmers Walk,16.3,11,2021-02-26,2021,179.6,Dumbbell,Full Body
+181,Squats,78.6,8,2021-03-05,2021,628.7,Barbell,Legs
+182,Deadlifts,25.8,10,2021-03-05,2021,257.8,Barbell,Legs
+183,Bench Press,16.8,10,2021-03-05,2021,167.7,Barbell,Chest
+184,Overhead Press,25.6,10,2021-03-05,2021,255.6,Barbell,Shoulders
+185,Barbell Rows,32.3,12,2021-03-05,2021,388,Barbell,Back
+186,Bicep Curl,47.2,10,2021-03-05,2021,472,Dumbbell,Arms
+187,Tricep Extension,16,8,2021-03-05,2021,128.2,Dumbbell,Arms
+188,Leg Press,28.2,12,2021-03-05,2021,338.5,Machine,Legs
+189,Pull-Ups,15.3,9,2021-03-05,2021,138,Bodyweight,Back
+190,Chin-Ups,15.9,8,2021-03-05,2021,127,Bodyweight,Back
+191,Dips,81.1,11,2021-03-05,2021,892,Bodyweight,Chest
+192,Push-Ups,17,5,2021-03-05,2021,85.1,Bodyweight,Chest
+193,Lunges,37.1,10,2021-03-05,2021,371,Bodyweight,Legs
+194,Plank,16.6,11,2021-03-05,2021,183.1,Bodyweight,Core
+195,Leg Raises,16.2,12,2021-03-05,2021,194.5,Bodyweight,Core
+196,Sit-Ups,29.4,9,2021-03-05,2021,264.6,Bodyweight,Core
+197,Russian Twists,33.9,4,2021-03-05,2021,135.6,Bodyweight,Core
+198,Burpees,15.5,10,2021-03-05,2021,155.2,Bodyweight,Full Body
+199,Kettlebell Swings,34.4,7,2021-03-05,2021,240.5,Kettlebell,Full Body
+200,Farmers Walk,37.6,9,2021-03-05,2021,338,Dumbbell,Full Body
+201,Squats,74.4,10,2021-03-12,2021,744.2,Barbell,Legs
+202,Deadlifts,18.2,8,2021-03-12,2021,145.3,Barbell,Legs
+203,Bench Press,31.6,10,2021-03-12,2021,316.2,Barbell,Chest
+204,Overhead Press,15.3,10,2021-03-12,2021,153.1,Barbell,Shoulders
+205,Barbell Rows,15.9,12,2021-03-12,2021,190.5,Barbell,Back
+206,Bicep Curl,44.8,9,2021-03-12,2021,403.2,Dumbbell,Arms
+207,Tricep Extension,37.1,12,2021-03-12,2021,445.3,Dumbbell,Arms
+208,Leg Press,17.3,11,2021-03-12,2021,189.9,Machine,Legs
+209,Pull-Ups,34.3,6,2021-03-12,2021,206.1,Bodyweight,Back
+210,Chin-Ups,37.4,10,2021-03-12,2021,373.8,Bodyweight,Back
+211,Dips,75.4,10,2021-03-12,2021,754.2,Bodyweight,Chest
+212,Push-Ups,31.2,9,2021-03-12,2021,280.4,Bodyweight,Chest
+213,Lunges,15.9,7,2021-03-12,2021,111.6,Bodyweight,Legs
+214,Plank,40.8,10,2021-03-12,2021,408.5,Bodyweight,Core
+215,Leg Raises,24.6,11,2021-03-12,2021,270.6,Bodyweight,Core
+216,Sit-Ups,29.4,12,2021-03-12,2021,352.8,Bodyweight,Core
+217,Russian Twists,15.6,10,2021-03-12,2021,156,Bodyweight,Core
+218,Burpees,25.5,11,2021-03-12,2021,280,Bodyweight,Full Body
+219,Kettlebell Swings,16.3,10,2021-03-12,2021,162.7,Kettlebell,Full Body
+220,Farmers Walk,16.1,5,2021-03-12,2021,80.6,Dumbbell,Full Body
+221,Squats,75.5,11,2021-03-19,2021,831,Barbell,Legs
+222,Deadlifts,33.1,9,2021-03-19,2021,297.7,Barbell,Legs
+223,Bench Press,17.6,11,2021-03-19,2021,193.1,Barbell,Chest
+224,Overhead Press,37.7,13,2021-03-19,2021,490.2,Barbell,Shoulders
+225,Barbell Rows,33.7,9,2021-03-19,2021,303.2,Barbell,Back
+226,Bicep Curl,34,11,2021-03-19,2021,374,Dumbbell,Arms
+227,Tricep Extension,16,8,2021-03-19,2021,127.7,Dumbbell,Arms
+228,Leg Press,26.6,7,2021-03-19,2021,186.2,Machine,Legs
+229,Pull-Ups,15.8,9,2021-03-19,2021,142.4,Bodyweight,Back
+230,Chin-Ups,15.6,10,2021-03-19,2021,156.1,Bodyweight,Back
+231,Dips,73,10,2021-03-19,2021,730.3,Bodyweight,Chest
+232,Push-Ups,18.3,11,2021-03-19,2021,200.9,Bodyweight,Chest
+233,Lunges,34.9,13,2021-03-19,2021,454.2,Bodyweight,Legs
+234,Plank,15.3,13,2021-03-19,2021,198.8,Bodyweight,Core
+235,Leg Raises,15.5,8,2021-03-19,2021,124.1,Bodyweight,Core
+236,Sit-Ups,24,12,2021-03-19,2021,288,Bodyweight,Core
+237,Russian Twists,25.5,9,2021-03-19,2021,229.5,Bodyweight,Core
+238,Burpees,16.3,10,2021-03-19,2021,163,Bodyweight,Full Body
+239,Kettlebell Swings,26,10,2021-03-19,2021,260.2,Kettlebell,Full Body
+240,Farmers Walk,28,7,2021-03-19,2021,195.7,Dumbbell,Full Body
+241,Squats,70.9,10,2021-03-26,2021,708.8,Barbell,Legs
+242,Deadlifts,19.5,10,2021-03-26,2021,194.9,Barbell,Legs
+243,Bench Press,33.4,7,2021-03-26,2021,233.9,Barbell,Chest
+244,Overhead Press,17,11,2021-03-26,2021,187.1,Barbell,Shoulders
+245,Barbell Rows,16.2,12,2021-03-26,2021,194.3,Barbell,Back
+246,Bicep Curl,45.2,10,2021-03-26,2021,452,Dumbbell,Arms
+247,Tricep Extension,33.6,12,2021-03-26,2021,402.9,Dumbbell,Arms
+248,Leg Press,14.3,10,2021-03-26,2021,142.7,Machine,Legs
+249,Pull-Ups,25.7,8,2021-03-26,2021,205.5,Bodyweight,Back
+250,Chin-Ups,25.9,9,2021-03-26,2021,233.4,Bodyweight,Back
+251,Dips,68.4,7,2021-03-26,2021,478.6,Bodyweight,Chest
+252,Push-Ups,36.9,7,2021-03-26,2021,258.1,Bodyweight,Chest
+253,Lunges,16.4,10,2021-03-26,2021,163.7,Bodyweight,Legs
+254,Plank,32.1,10,2021-03-26,2021,320.5,Bodyweight,Core
+255,Leg Raises,24.4,10,2021-03-26,2021,243.8,Bodyweight,Core
+256,Sit-Ups,33.6,12,2021-03-26,2021,403.2,Bodyweight,Core
+257,Russian Twists,16.1,13,2021-03-26,2021,208.8,Bodyweight,Core
+258,Burpees,24.2,10,2021-03-26,2021,241.8,Bodyweight,Full Body
+259,Kettlebell Swings,17.4,13,2021-03-26,2021,226.1,Kettlebell,Full Body
+260,Farmers Walk,16.6,8,2021-03-26,2021,133,Dumbbell,Full Body
+261,Squats,67.5,10,2021-04-02,2021,675,Barbell,Legs
+262,Deadlifts,34.3,11,2021-04-02,2021,377.8,Barbell,Legs
+263,Bench Press,16.9,9,2021-04-02,2021,152,Barbell,Chest
+264,Overhead Press,32.3,12,2021-04-02,2021,387.2,Barbell,Shoulders
+265,Barbell Rows,27.1,7,2021-04-02,2021,189.9,Barbell,Back
+266,Bicep Curl,43.2,9,2021-04-02,2021,388.8,Dumbbell,Arms
+267,Tricep Extension,16.6,12,2021-04-02,2021,199.3,Dumbbell,Arms
+268,Leg Press,25.3,9,2021-04-02,2021,228,Machine,Legs
+269,Pull-Ups,17,9,2021-04-02,2021,153.4,Bodyweight,Back
+270,Chin-Ups,17.3,10,2021-04-02,2021,173,Bodyweight,Back
+271,Dips,69,10,2021-04-02,2021,689.8,Bodyweight,Chest
+272,Push-Ups,16.2,10,2021-04-02,2021,162,Bodyweight,Chest
+273,Lunges,27.8,10,2021-04-02,2021,278.5,Bodyweight,Legs
+274,Plank,17.2,10,2021-04-02,2021,172.2,Bodyweight,Core
+275,Leg Raises,15.9,6,2021-04-02,2021,95.5,Bodyweight,Core
+276,Sit-Ups,27.6,11,2021-04-02,2021,303.6,Bodyweight,Core
+277,Russian Twists,29.7,10,2021-04-02,2021,297.4,Bodyweight,Core
+278,Burpees,16.4,9,2021-04-02,2021,147.5,Bodyweight,Full Body
+279,Kettlebell Swings,30.9,9,2021-04-02,2021,278.1,Kettlebell,Full Body
+280,Farmers Walk,29,10,2021-04-02,2021,290.1,Dumbbell,Full Body
+281,Squats,75.4,12,2021-04-09,2021,905,Barbell,Legs
+282,Deadlifts,18.2,11,2021-04-09,2021,200.4,Barbell,Legs
+283,Bench Press,26.7,10,2021-04-09,2021,266.8,Barbell,Chest
+284,Overhead Press,16.5,9,2021-04-09,2021,148.9,Barbell,Shoulders
+285,Barbell Rows,17.9,8,2021-04-09,2021,143.2,Barbell,Back
+286,Bicep Curl,42.4,10,2021-04-09,2021,424,Dumbbell,Arms
+287,Tricep Extension,26.2,8,2021-04-09,2021,209.4,Dumbbell,Arms
+288,Leg Press,16.8,11,2021-04-09,2021,184.5,Machine,Legs
+289,Pull-Ups,29,11,2021-04-09,2021,318.8,Bodyweight,Back
+290,Chin-Ups,32.5,10,2021-04-09,2021,324.7,Bodyweight,Back
+291,Dips,82.3,11,2021-04-09,2021,905.5,Bodyweight,Chest
+292,Push-Ups,28.4,9,2021-04-09,2021,255.2,Bodyweight,Chest
+293,Lunges,17.6,13,2021-04-09,2021,229.3,Bodyweight,Legs
+294,Plank,26.6,8,2021-04-09,2021,213.1,Bodyweight,Core
+295,Leg Raises,28.5,7,2021-04-09,2021,199.7,Bodyweight,Core
+296,Sit-Ups,24.6,10,2021-04-09,2021,246,Bodyweight,Core
+297,Russian Twists,18.5,10,2021-04-09,2021,185.5,Bodyweight,Core
+298,Burpees,29.8,9,2021-04-09,2021,267.8,Bodyweight,Full Body
+299,Kettlebell Swings,18.1,10,2021-04-09,2021,180.9,Kettlebell,Full Body
+300,Farmers Walk,19.8,10,2021-04-09,2021,198,Dumbbell,Full Body
+301,Squats,78.1,8,2021-04-16,2021,625.1,Barbell,Legs
+302,Deadlifts,27.6,13,2021-04-16,2021,358.4,Barbell,Legs
+303,Bench Press,17.9,12,2021-04-16,2021,214.5,Barbell,Chest
+304,Overhead Press,25.4,8,2021-04-16,2021,203.2,Barbell,Shoulders
+305,Barbell Rows,28.5,7,2021-04-16,2021,199.5,Barbell,Back
+306,Bicep Curl,38.8,10,2021-04-16,2021,388,Dumbbell,Arms
+307,Tricep Extension,19,10,2021-04-16,2021,190.3,Dumbbell,Arms
+308,Leg Press,28.7,11,2021-04-16,2021,315.7,Machine,Legs
+309,Pull-Ups,18.1,12,2021-04-16,2021,217.1,Bodyweight,Back
+310,Chin-Ups,17.4,12,2021-04-16,2021,209.1,Bodyweight,Back
+311,Dips,80.2,10,2021-04-16,2021,802,Bodyweight,Chest
+312,Push-Ups,18.8,8,2021-04-16,2021,150.5,Bodyweight,Chest
+313,Lunges,27.3,9,2021-04-16,2021,245.9,Bodyweight,Legs
+314,Plank,20.3,11,2021-04-16,2021,223.3,Bodyweight,Core
+315,Leg Raises,20.3,8,2021-04-16,2021,162.5,Bodyweight,Core
+316,Sit-Ups,32.4,10,2021-04-16,2021,324,Bodyweight,Core
+317,Russian Twists,26.6,7,2021-04-16,2021,186.4,Bodyweight,Core
+318,Burpees,20.2,8,2021-04-16,2021,161.6,Bodyweight,Full Body
+319,Kettlebell Swings,26.3,8,2021-04-16,2021,210.7,Kettlebell,Full Body
+320,Farmers Walk,28.8,10,2021-04-16,2021,287.8,Dumbbell,Full Body
+321,Squats,83.9,5,2021-04-23,2021,419.3,Barbell,Legs
+322,Deadlifts,17.9,9,2021-04-23,2021,160.7,Barbell,Legs
+323,Bench Press,27.2,13,2021-04-23,2021,353.4,Barbell,Chest
+324,Overhead Press,17.8,11,2021-04-23,2021,196.3,Barbell,Shoulders
+325,Barbell Rows,19.2,10,2021-04-23,2021,191.9,Barbell,Back
+326,Bicep Curl,40.8,11,2021-04-23,2021,448.8,Dumbbell,Arms
+327,Tricep Extension,27.7,4,2021-04-23,2021,110.7,Dumbbell,Arms
+328,Leg Press,21.8,9,2021-04-23,2021,196.5,Machine,Legs
+329,Pull-Ups,27.3,11,2021-04-23,2021,300.7,Bodyweight,Back
+330,Chin-Ups,25.4,7,2021-04-23,2021,177.7,Bodyweight,Back
+331,Dips,91.6,14,2021-04-23,2021,1282.2,Bodyweight,Chest
+332,Push-Ups,28.4,10,2021-04-23,2021,284.2,Bodyweight,Chest
+333,Lunges,19.7,11,2021-04-23,2021,216.9,Bodyweight,Legs
+334,Plank,27.5,12,2021-04-23,2021,330.5,Bodyweight,Core
+335,Leg Raises,28.5,9,2021-04-23,2021,256.2,Bodyweight,Core
+336,Sit-Ups,27.3,9,2021-04-23,2021,245.7,Bodyweight,Core
+337,Russian Twists,20.7,8,2021-04-23,2021,165.9,Bodyweight,Core
+338,Burpees,28.3,11,2021-04-23,2021,311.5,Bodyweight,Full Body
+339,Kettlebell Swings,21.9,6,2021-04-23,2021,131.6,Kettlebell,Full Body
+340,Farmers Walk,22.2,11,2021-04-23,2021,244.6,Dumbbell,Full Body
+341,Squats,79.5,11,2021-04-30,2021,874.4,Barbell,Legs
+342,Deadlifts,26.6,12,2021-04-30,2021,319.4,Barbell,Legs
+343,Bench Press,20,12,2021-04-30,2021,240.1,Barbell,Chest
+344,Overhead Press,28.1,12,2021-04-30,2021,337.7,Barbell,Shoulders
+345,Barbell Rows,29.7,14,2021-04-30,2021,415.5,Barbell,Back
+346,Bicep Curl,38,10,2021-04-30,2021,380,Dumbbell,Arms
+347,Tricep Extension,20.3,9,2021-04-30,2021,182.6,Dumbbell,Arms
+348,Leg Press,29.5,8,2021-04-30,2021,236,Machine,Legs
+349,Pull-Ups,21.8,10,2021-04-30,2021,217.6,Bodyweight,Back
+350,Chin-Ups,22.2,9,2021-04-30,2021,199.6,Bodyweight,Back
+351,Dips,87.4,11,2021-04-30,2021,961.9,Bodyweight,Chest
+352,Push-Ups,20.5,5,2021-04-30,2021,102.7,Bodyweight,Chest
+353,Lunges,27.4,10,2021-04-30,2021,273.8,Bodyweight,Legs
+354,Plank,21.4,10,2021-04-30,2021,213.7,Bodyweight,Core
+355,Leg Raises,20.9,10,2021-04-30,2021,208.8,Bodyweight,Core
+356,Sit-Ups,35.7,8,2021-04-30,2021,285.6,Bodyweight,Core
+357,Russian Twists,26.2,9,2021-04-30,2021,235.7,Bodyweight,Core
+358,Burpees,20.9,11,2021-04-30,2021,229.5,Bodyweight,Full Body
+359,Kettlebell Swings,26,6,2021-04-30,2021,156.2,Kettlebell,Full Body
+360,Farmers Walk,26.1,12,2021-04-30,2021,313.7,Dumbbell,Full Body
+361,Squats,85.8,8,2021-05-07,2021,686.6,Barbell,Legs
+362,Deadlifts,18.9,15,2021-05-07,2021,282.8,Barbell,Legs
+363,Bench Press,29.9,10,2021-05-07,2021,299,Barbell,Chest
+364,Overhead Press,20.9,7,2021-05-07,2021,146.5,Barbell,Shoulders
+365,Barbell Rows,21.4,7,2021-05-07,2021,149.8,Barbell,Back
+366,Bicep Curl,38.4,10,2021-05-07,2021,384,Dumbbell,Arms
+367,Tricep Extension,25.9,11,2021-05-07,2021,284.5,Dumbbell,Arms
+368,Leg Press,21.6,8,2021-05-07,2021,173,Machine,Legs
+369,Pull-Ups,27,11,2021-05-07,2021,296.6,Bodyweight,Back
+370,Chin-Ups,27.8,10,2021-05-07,2021,278.5,Bodyweight,Back
+371,Dips,86.7,10,2021-05-07,2021,866.9,Bodyweight,Chest
+372,Push-Ups,32.5,12,2021-05-07,2021,390,Bodyweight,Chest
+373,Lunges,22.7,9,2021-05-07,2021,204.5,Bodyweight,Legs
+374,Plank,26.6,11,2021-05-07,2021,292.5,Bodyweight,Core
+375,Leg Raises,25.8,7,2021-05-07,2021,180.7,Bodyweight,Core
+376,Sit-Ups,31.2,11,2021-05-07,2021,343.2,Bodyweight,Core
+377,Russian Twists,22.7,9,2021-05-07,2021,204.5,Bodyweight,Core
+378,Burpees,26.9,8,2021-05-07,2021,215,Bodyweight,Full Body
+379,Kettlebell Swings,23.9,11,2021-05-07,2021,262.6,Kettlebell,Full Body
+380,Farmers Walk,22.7,11,2021-05-07,2021,250,Dumbbell,Full Body
+381,Squats,83.7,12,2021-05-14,2021,1005,Barbell,Legs
+382,Deadlifts,28.9,10,2021-05-14,2021,288.7,Barbell,Legs
+383,Bench Press,20.1,9,2021-05-14,2021,181,Barbell,Chest
+384,Overhead Press,26.9,17,2021-05-14,2021,457.9,Barbell,Shoulders
+385,Barbell Rows,28.8,8,2021-05-14,2021,230.1,Barbell,Back
+386,Bicep Curl,38.4,15,2021-05-14,2021,576,Dumbbell,Arms
+387,Tricep Extension,23.7,10,2021-05-14,2021,237.3,Dumbbell,Arms
+388,Leg Press,23.5,15,2021-05-14,2021,352,Machine,Legs
+389,Pull-Ups,22.6,15,2021-05-14,2021,338.4,Bodyweight,Back
+390,Chin-Ups,24.8,13,2021-05-14,2021,322.1,Bodyweight,Back
+391,Dips,84.5,11,2021-05-14,2021,929.5,Bodyweight,Chest
+392,Push-Ups,20.6,10,2021-05-14,2021,206.2,Bodyweight,Chest
+393,Lunges,29.2,12,2021-05-14,2021,350.4,Bodyweight,Legs
+394,Plank,23.7,6,2021-05-14,2021,141.9,Bodyweight,Core
+395,Leg Raises,22.6,11,2021-05-14,2021,248.2,Bodyweight,Core
+396,Sit-Ups,33.9,11,2021-05-14,2021,372.9,Bodyweight,Core
+397,Russian Twists,27,11,2021-05-14,2021,296.6,Bodyweight,Core
+398,Burpees,23.9,13,2021-05-14,2021,311,Bodyweight,Full Body
+399,Kettlebell Swings,27,9,2021-05-14,2021,242.7,Kettlebell,Full Body
+400,Farmers Walk,29.3,7,2021-05-14,2021,205,Dumbbell,Full Body
+401,Squats,83.5,11,2021-05-21,2021,919,Barbell,Legs
+402,Deadlifts,18.9,11,2021-05-21,2021,207.6,Barbell,Legs
+403,Bench Press,31.9,10,2021-05-21,2021,319.4,Barbell,Chest
+404,Overhead Press,23.6,11,2021-05-21,2021,259.7,Barbell,Shoulders
+405,Barbell Rows,22.7,12,2021-05-21,2021,272.3,Barbell,Back
+406,Bicep Curl,42.8,10,2021-05-21,2021,428,Dumbbell,Arms
+407,Tricep Extension,27.8,7,2021-05-21,2021,194.8,Dumbbell,Arms
+408,Leg Press,22.4,12,2021-05-21,2021,268.6,Machine,Legs
+409,Pull-Ups,24.8,6,2021-05-21,2021,149.1,Bodyweight,Back
+410,Chin-Ups,26.6,11,2021-05-21,2021,292.6,Bodyweight,Back
+411,Dips,80.9,12,2021-05-21,2021,971.3,Bodyweight,Chest
+412,Push-Ups,32.9,10,2021-05-21,2021,329.1,Bodyweight,Chest
+413,Lunges,24.1,11,2021-05-21,2021,264.9,Bodyweight,Legs
+414,Plank,27.4,10,2021-05-21,2021,274,Bodyweight,Core
+415,Leg Raises,25.8,11,2021-05-21,2021,283.8,Bodyweight,Core
+416,Sit-Ups,28.5,12,2021-05-21,2021,342,Bodyweight,Core
+417,Russian Twists,22.3,8,2021-05-21,2021,178.1,Bodyweight,Core
+418,Burpees,26,11,2021-05-21,2021,285.6,Bodyweight,Full Body
+419,Kettlebell Swings,25.1,9,2021-05-21,2021,225.6,Kettlebell,Full Body
+420,Farmers Walk,24.9,9,2021-05-21,2021,223.7,Dumbbell,Full Body
+421,Squats,76.9,11,2021-05-28,2021,846,Barbell,Legs
+422,Deadlifts,34.2,8,2021-05-28,2021,273.6,Barbell,Legs
+423,Bench Press,24.5,10,2021-05-28,2021,244.5,Barbell,Chest
+424,Overhead Press,28.6,12,2021-05-28,2021,343.6,Barbell,Shoulders
+425,Barbell Rows,24.4,12,2021-05-28,2021,293.3,Barbell,Back
+426,Bicep Curl,34,13,2021-05-28,2021,442,Dumbbell,Arms
+427,Tricep Extension,26.3,12,2021-05-28,2021,315.1,Dumbbell,Arms
+428,Leg Press,24.7,11,2021-05-28,2021,271.3,Machine,Legs
+429,Pull-Ups,22.4,10,2021-05-28,2021,223.7,Bodyweight,Back
+430,Chin-Ups,27.1,12,2021-05-28,2021,324.7,Bodyweight,Back
+431,Dips,71.2,11,2021-05-28,2021,783.1,Bodyweight,Chest
+432,Push-Ups,24.6,9,2021-05-28,2021,221,Bodyweight,Chest
+433,Lunges,24.2,10,2021-05-28,2021,242,Bodyweight,Legs
+434,Plank,27.4,11,2021-05-28,2021,301.2,Bodyweight,Core
+435,Leg Raises,23,9,2021-05-28,2021,206.6,Bodyweight,Core
+436,Sit-Ups,30.6,9,2021-05-28,2021,275.4,Bodyweight,Core
+437,Russian Twists,22.2,10,2021-05-28,2021,222.1,Bodyweight,Core
+438,Burpees,25.2,7,2021-05-28,2021,176.1,Bodyweight,Full Body
+439,Kettlebell Swings,23.7,12,2021-05-28,2021,284.4,Kettlebell,Full Body
+440,Farmers Walk,24.4,8,2021-05-28,2021,195.2,Dumbbell,Full Body
+441,Squats,73.2,13,2021-06-04,2021,951.1,Barbell,Legs
+442,Deadlifts,25.7,10,2021-06-04,2021,256.9,Barbell,Legs
+443,Bench Press,25.1,7,2021-06-04,2021,175.9,Barbell,Chest
+444,Overhead Press,28.1,13,2021-06-04,2021,364.9,Barbell,Shoulders
+445,Barbell Rows,22.8,8,2021-06-04,2021,182.7,Barbell,Back
+446,Bicep Curl,38,10,2021-06-04,2021,380,Dumbbell,Arms
+447,Tricep Extension,22.8,8,2021-06-04,2021,182.5,Dumbbell,Arms
+448,Leg Press,23.3,15,2021-06-04,2021,349.1,Machine,Legs
+449,Pull-Ups,20.5,12,2021-06-04,2021,246.4,Bodyweight,Back
+450,Chin-Ups,23.5,13,2021-06-04,2021,305.5,Bodyweight,Back
+451,Dips,70.1,10,2021-06-04,2021,701.3,Bodyweight,Chest
+452,Push-Ups,24.1,12,2021-06-04,2021,289.2,Bodyweight,Chest
+453,Lunges,24.9,14,2021-06-04,2021,349.3,Bodyweight,Legs
+454,Plank,23.9,14,2021-06-04,2021,334.5,Bodyweight,Core
+455,Leg Raises,21.9,10,2021-06-04,2021,219.4,Bodyweight,Core
+456,Sit-Ups,24.6,8,2021-06-04,2021,196.8,Bodyweight,Core
+457,Russian Twists,24.9,12,2021-06-04,2021,298.4,Bodyweight,Core
+458,Burpees,22.7,11,2021-06-04,2021,249.8,Bodyweight,Full Body
+459,Kettlebell Swings,23.9,9,2021-06-04,2021,214.7,Kettlebell,Full Body
+460,Farmers Walk,23.2,11,2021-06-04,2021,255.5,Dumbbell,Full Body
+461,Squats,71,11,2021-06-11,2021,781.4,Barbell,Legs
+462,Deadlifts,24.2,14,2021-06-11,2021,338.8,Barbell,Legs
+463,Bench Press,23.7,9,2021-06-11,2021,213,Barbell,Chest
+464,Overhead Press,23.3,9,2021-06-11,2021,209.7,Barbell,Shoulders
+465,Barbell Rows,21.2,10,2021-06-11,2021,212.5,Barbell,Back
+466,Bicep Curl,44.4,8,2021-06-11,2021,355.2,Dumbbell,Arms
+467,Tricep Extension,25.6,13,2021-06-11,2021,332.4,Dumbbell,Arms
+468,Leg Press,23.5,9,2021-06-11,2021,211.7,Machine,Legs
+469,Pull-Ups,26.4,10,2021-06-11,2021,263.8,Bodyweight,Back
+470,Chin-Ups,24.7,11,2021-06-11,2021,271.6,Bodyweight,Back
+471,Dips,81.2,8,2021-06-11,2021,649.7,Bodyweight,Chest
+472,Push-Ups,24.2,6,2021-06-11,2021,145.1,Bodyweight,Chest
+473,Lunges,22.2,12,2021-06-11,2021,267,Bodyweight,Legs
+474,Plank,27.7,6,2021-06-11,2021,165.9,Bodyweight,Core
+475,Leg Raises,27.2,13,2021-06-11,2021,353,Bodyweight,Core
+476,Sit-Ups,25.2,10,2021-06-11,2021,252,Bodyweight,Core
+477,Russian Twists,23.2,6,2021-06-11,2021,139.3,Bodyweight,Core
+478,Burpees,26.5,9,2021-06-11,2021,238.4,Bodyweight,Full Body
+479,Kettlebell Swings,24.7,7,2021-06-11,2021,172.6,Kettlebell,Full Body
+480,Farmers Walk,25.2,9,2021-06-11,2021,226.8,Dumbbell,Full Body
+481,Squats,77.9,11,2021-06-18,2021,856.9,Barbell,Legs
+482,Deadlifts,25.5,8,2021-06-18,2021,203.9,Barbell,Legs
+483,Bench Press,22.8,11,2021-06-18,2021,250.8,Barbell,Chest
+484,Overhead Press,27,9,2021-06-18,2021,243.1,Barbell,Shoulders
+485,Barbell Rows,28.9,8,2021-06-18,2021,231.1,Barbell,Back
+486,Bicep Curl,38,8,2021-06-18,2021,304,Dumbbell,Arms
+487,Tricep Extension,21.7,12,2021-06-18,2021,260.4,Dumbbell,Arms
+488,Leg Press,27.4,11,2021-06-18,2021,301.1,Machine,Legs
+489,Pull-Ups,26.4,11,2021-06-18,2021,289.9,Bodyweight,Back
+490,Chin-Ups,25.3,12,2021-06-18,2021,303.9,Bodyweight,Back
+491,Dips,79.4,9,2021-06-18,2021,714.8,Bodyweight,Chest
+492,Push-Ups,24.4,10,2021-06-18,2021,244.4,Bodyweight,Chest
+493,Lunges,30.4,11,2021-06-18,2021,333.9,Bodyweight,Legs
+494,Plank,22.1,11,2021-06-18,2021,242.6,Bodyweight,Core
+495,Leg Raises,24.8,11,2021-06-18,2021,272.5,Bodyweight,Core
+496,Sit-Ups,28.2,12,2021-06-18,2021,338.4,Bodyweight,Core
+497,Russian Twists,36,10,2021-06-18,2021,360,Bodyweight,Core
+498,Burpees,24.7,7,2021-06-18,2021,172.6,Bodyweight,Full Body
+499,Kettlebell Swings,39.5,10,2021-06-18,2021,395.3,Kettlebell,Full Body
+500,Farmers Walk,36.4,8,2021-06-18,2021,291.1,Dumbbell,Full Body
+501,Squats,82.8,11,2021-06-25,2021,911,Barbell,Legs
+502,Deadlifts,22.6,11,2021-06-25,2021,248.8,Barbell,Legs
+503,Bench Press,30.7,11,2021-06-25,2021,338.2,Barbell,Chest
+504,Overhead Press,21.2,11,2021-06-25,2021,233.3,Barbell,Shoulders
+505,Barbell Rows,26.1,10,2021-06-25,2021,260.6,Barbell,Back
+506,Bicep Curl,32.8,8,2021-06-25,2021,262.4,Dumbbell,Arms
+507,Tricep Extension,29.7,8,2021-06-25,2021,237.7,Dumbbell,Arms
+508,Leg Press,24.9,7,2021-06-25,2021,174,Machine,Legs
+509,Pull-Ups,37,12,2021-06-25,2021,443.5,Bodyweight,Back
+510,Chin-Ups,40.4,11,2021-06-25,2021,444.6,Bodyweight,Back
+511,Dips,82.1,8,2021-06-25,2021,657,Bodyweight,Chest
+512,Push-Ups,31,8,2021-06-25,2021,248,Bodyweight,Chest
+513,Lunges,25.2,10,2021-06-25,2021,252,Bodyweight,Legs
+514,Plank,28.9,8,2021-06-25,2021,231.5,Bodyweight,Core
+515,Leg Raises,30.3,7,2021-06-25,2021,212.1,Bodyweight,Core
+516,Sit-Ups,33.6,10,2021-06-25,2021,336,Bodyweight,Core
+517,Russian Twists,24.1,8,2021-06-25,2021,193.2,Bodyweight,Core
+518,Burpees,30.6,10,2021-06-25,2021,305.8,Bodyweight,Full Body
+519,Kettlebell Swings,21.3,12,2021-06-25,2021,255.2,Kettlebell,Full Body
+520,Farmers Walk,21.8,15,2021-06-25,2021,326.7,Dumbbell,Full Body
+521,Squats,87.3,9,2021-07-02,2021,785.6,Barbell,Legs
+522,Deadlifts,35.6,16,2021-07-02,2021,569.7,Barbell,Legs
+523,Bench Press,24.9,11,2021-07-02,2021,273.9,Barbell,Chest
+524,Overhead Press,29.7,10,2021-07-02,2021,296.8,Barbell,Shoulders
+525,Barbell Rows,38.1,7,2021-07-02,2021,266.6,Barbell,Back
+526,Bicep Curl,45.6,13,2021-07-02,2021,592.8,Dumbbell,Arms
+527,Tricep Extension,26.3,8,2021-07-02,2021,210.7,Dumbbell,Arms
+528,Leg Press,32,13,2021-07-02,2021,415.8,Machine,Legs
+529,Pull-Ups,23.5,10,2021-07-02,2021,235.2,Bodyweight,Back
+530,Chin-Ups,20.3,8,2021-07-02,2021,162.4,Bodyweight,Back
+531,Dips,83.6,12,2021-07-02,2021,1003.8,Bodyweight,Chest
+532,Push-Ups,25.8,12,2021-07-02,2021,310,Bodyweight,Chest
+533,Lunges,40.7,5,2021-07-02,2021,203.6,Bodyweight,Legs
+534,Plank,25.7,13,2021-07-02,2021,334.1,Bodyweight,Core
+535,Leg Raises,25.3,9,2021-07-02,2021,227.6,Bodyweight,Core
+536,Sit-Ups,35.7,10,2021-07-02,2021,357,Bodyweight,Core
+537,Russian Twists,33,8,2021-07-02,2021,264,Bodyweight,Core
+538,Burpees,26.3,10,2021-07-02,2021,263.2,Bodyweight,Full Body
+539,Kettlebell Swings,32.9,11,2021-07-02,2021,361.9,Kettlebell,Full Body
+540,Farmers Walk,31.6,7,2021-07-02,2021,220.9,Dumbbell,Full Body
+541,Squats,86.9,14,2021-07-09,2021,1216.4,Barbell,Legs
+542,Deadlifts,25.5,11,2021-07-09,2021,280.1,Barbell,Legs
+543,Bench Press,38.3,11,2021-07-09,2021,421.4,Barbell,Chest
+544,Overhead Press,25.3,12,2021-07-09,2021,303.7,Barbell,Shoulders
+545,Barbell Rows,24.6,8,2021-07-09,2021,196.9,Barbell,Back
+546,Bicep Curl,41.2,8,2021-07-09,2021,329.6,Dumbbell,Arms
+547,Tricep Extension,45.6,11,2021-07-09,2021,501.6,Dumbbell,Arms
+548,Leg Press,27.7,9,2021-07-09,2021,249.1,Machine,Legs
+549,Pull-Ups,35.4,12,2021-07-09,2021,425.2,Bodyweight,Back
+550,Chin-Ups,33.2,8,2021-07-09,2021,265.8,Bodyweight,Back
+551,Dips,83.5,11,2021-07-09,2021,918.2,Bodyweight,Chest
+552,Push-Ups,38.7,14,2021-07-09,2021,542.3,Bodyweight,Chest
+553,Lunges,25.8,9,2021-07-09,2021,231.8,Bodyweight,Legs
+554,Plank,43.6,9,2021-07-09,2021,392.6,Bodyweight,Core
+555,Leg Raises,28.8,11,2021-07-09,2021,316.8,Bodyweight,Core
+556,Sit-Ups,29.4,11,2021-07-09,2021,323.4,Bodyweight,Core
+557,Russian Twists,25.6,10,2021-07-09,2021,255.8,Bodyweight,Core
+558,Burpees,28,14,2021-07-09,2021,392.5,Bodyweight,Full Body
+559,Kettlebell Swings,26.3,10,2021-07-09,2021,262.8,Kettlebell,Full Body
+560,Farmers Walk,24.3,11,2021-07-09,2021,267.7,Dumbbell,Full Body
+561,Squats,84.2,8,2021-07-16,2021,673.5,Barbell,Legs
+562,Deadlifts,40.8,9,2021-07-16,2021,367.4,Barbell,Legs
+563,Bench Press,22.8,14,2021-07-16,2021,319.5,Barbell,Chest
+564,Overhead Press,40.6,11,2021-07-16,2021,447,Barbell,Shoulders
+565,Barbell Rows,37.8,9,2021-07-16,2021,340.5,Barbell,Back
+566,Bicep Curl,43.6,11,2021-07-16,2021,479.6,Dumbbell,Arms
+567,Tricep Extension,27.5,11,2021-07-16,2021,302,Dumbbell,Arms
+568,Leg Press,29,12,2021-07-16,2021,348.3,Machine,Legs
+569,Pull-Ups,27.1,8,2021-07-16,2021,216.7,Bodyweight,Back
+570,Chin-Ups,24.9,10,2021-07-16,2021,249.3,Bodyweight,Back
+571,Dips,84.3,8,2021-07-16,2021,674.5,Bodyweight,Chest
+572,Push-Ups,23.2,7,2021-07-16,2021,162.7,Bodyweight,Chest
+573,Lunges,38.9,9,2021-07-16,2021,349.7,Bodyweight,Legs
+574,Plank,29,15,2021-07-16,2021,435.5,Bodyweight,Core
+575,Leg Raises,26.1,12,2021-07-16,2021,312.9,Bodyweight,Core
+576,Sit-Ups,27.6,12,2021-07-16,2021,331.2,Bodyweight,Core
+577,Russian Twists,30,13,2021-07-16,2021,390,Bodyweight,Core
+578,Burpees,23.7,9,2021-07-16,2021,213.7,Bodyweight,Full Body
+579,Kettlebell Swings,28.1,13,2021-07-16,2021,365.9,Kettlebell,Full Body
+580,Farmers Walk,28.1,9,2021-07-16,2021,253,Dumbbell,Full Body
+581,Squats,99.3,10,2021-07-23,2021,992.9,Barbell,Legs
+582,Deadlifts,22.8,11,2021-07-23,2021,250.3,Barbell,Legs
+583,Bench Press,35.4,11,2021-07-23,2021,389.4,Barbell,Chest
+584,Overhead Press,27.6,11,2021-07-23,2021,304.1,Barbell,Shoulders
+585,Barbell Rows,26.3,8,2021-07-23,2021,210.1,Barbell,Back
+586,Bicep Curl,39.2,8,2021-07-23,2021,313.6,Dumbbell,Arms
+587,Tricep Extension,40,13,2021-07-23,2021,520,Dumbbell,Arms
+588,Leg Press,26.4,9,2021-07-23,2021,237.8,Machine,Legs
+589,Pull-Ups,30,10,2021-07-23,2021,300.5,Bodyweight,Back
+590,Chin-Ups,28.7,11,2021-07-23,2021,316.2,Bodyweight,Back
+591,Dips,97.1,8,2021-07-23,2021,776.7,Bodyweight,Chest
+592,Push-Ups,38,9,2021-07-23,2021,342.4,Bodyweight,Chest
+593,Lunges,27.2,10,2021-07-23,2021,272.2,Bodyweight,Legs
+594,Plank,38.4,11,2021-07-23,2021,422.4,Bodyweight,Core
+595,Leg Raises,29.1,11,2021-07-23,2021,320.1,Bodyweight,Core
+596,Sit-Ups,29.1,10,2021-07-23,2021,291,Bodyweight,Core
+597,Russian Twists,27,11,2021-07-23,2021,296.6,Bodyweight,Core
+598,Burpees,27.7,8,2021-07-23,2021,221.3,Bodyweight,Full Body
+599,Kettlebell Swings,28,9,2021-07-23,2021,251.6,Kettlebell,Full Body
+600,Farmers Walk,28.2,10,2021-07-23,2021,281.9,Dumbbell,Full Body
+601,Squats,98.1,6,2021-07-30,2021,588.3,Barbell,Legs
+602,Deadlifts,36.7,12,2021-07-30,2021,440.7,Barbell,Legs
+603,Bench Press,25,13,2021-07-30,2021,325,Barbell,Chest
+604,Overhead Press,41.2,13,2021-07-30,2021,535.2,Barbell,Shoulders
+605,Barbell Rows,29.1,10,2021-07-30,2021,291,Barbell,Back
+606,Bicep Curl,42.8,10,2021-07-30,2021,428,Dumbbell,Arms
+607,Tricep Extension,28.8,11,2021-07-30,2021,316.7,Dumbbell,Arms
+608,Leg Press,27.5,9,2021-07-30,2021,247.4,Machine,Legs
+609,Pull-Ups,27.2,11,2021-07-30,2021,299.4,Bodyweight,Back
+610,Chin-Ups,30.3,9,2021-07-30,2021,272.4,Bodyweight,Back
+611,Dips,100,10,2021-07-30,2021,1000,Bodyweight,Chest
+612,Push-Ups,25.1,10,2021-07-30,2021,250.9,Bodyweight,Chest
+613,Lunges,28.7,10,2021-07-30,2021,286.9,Bodyweight,Legs
+614,Plank,31.3,5,2021-07-30,2021,156.5,Bodyweight,Core
+615,Leg Raises,27,8,2021-07-30,2021,215.9,Bodyweight,Core
+616,Sit-Ups,27.9,8,2021-07-30,2021,223.2,Bodyweight,Core
+617,Russian Twists,29.2,9,2021-07-30,2021,262.5,Bodyweight,Core
+618,Burpees,29.2,8,2021-07-30,2021,233.9,Bodyweight,Full Body
+619,Kettlebell Swings,30,11,2021-07-30,2021,330.4,Kettlebell,Full Body
+620,Farmers Walk,29.2,12,2021-07-30,2021,350,Dumbbell,Full Body
+621,Squats,96.4,11,2021-08-06,2021,1060.3,Barbell,Legs
+622,Deadlifts,26.9,8,2021-08-06,2021,215,Barbell,Legs
+623,Bench Press,31.1,9,2021-08-06,2021,280.3,Barbell,Chest
+624,Overhead Press,29.5,10,2021-08-06,2021,295.1,Barbell,Shoulders
+625,Barbell Rows,27.1,11,2021-08-06,2021,298.2,Barbell,Back
+626,Bicep Curl,42.4,10,2021-08-06,2021,424,Dumbbell,Arms
+627,Tricep Extension,30.2,6,2021-08-06,2021,181.4,Dumbbell,Arms
+628,Leg Press,25.5,8,2021-08-06,2021,204.3,Machine,Legs
+629,Pull-Ups,27.4,11,2021-08-06,2021,301.5,Bodyweight,Back
+630,Chin-Ups,29.1,6,2021-08-06,2021,174.3,Bodyweight,Back
+631,Dips,94.8,9,2021-08-06,2021,853,Bodyweight,Chest
+632,Push-Ups,32.9,8,2021-08-06,2021,263.2,Bodyweight,Chest
+633,Lunges,29.2,11,2021-08-06,2021,321.4,Bodyweight,Legs
+634,Plank,31,8,2021-08-06,2021,247.9,Bodyweight,Core
+635,Leg Raises,30,10,2021-08-06,2021,300,Bodyweight,Core
+636,Sit-Ups,24.9,10,2021-08-06,2021,249,Bodyweight,Core
+637,Russian Twists,26.6,9,2021-08-06,2021,239.5,Bodyweight,Core
+638,Burpees,29.7,11,2021-08-06,2021,326.3,Bodyweight,Full Body
+639,Kettlebell Swings,28.2,9,2021-08-06,2021,253.9,Kettlebell,Full Body
+640,Farmers Walk,29.6,13,2021-08-06,2021,385,Dumbbell,Full Body
+641,Squats,94.5,9,2021-08-13,2021,850.9,Barbell,Legs
+642,Deadlifts,32.7,10,2021-08-13,2021,327.3,Barbell,Legs
+643,Bench Press,28.3,13,2021-08-13,2021,367.3,Barbell,Chest
+644,Overhead Press,31.1,12,2021-08-13,2021,373,Barbell,Shoulders
+645,Barbell Rows,28.7,11,2021-08-13,2021,316.2,Barbell,Back
+646,Bicep Curl,32,13,2021-08-13,2021,416,Dumbbell,Arms
+647,Tricep Extension,28.1,8,2021-08-13,2021,224.7,Dumbbell,Arms
+648,Leg Press,31.5,10,2021-08-13,2021,314.9,Machine,Legs
+649,Pull-Ups,27.2,11,2021-08-13,2021,298.9,Bodyweight,Back
+650,Chin-Ups,29.8,9,2021-08-13,2021,267.9,Bodyweight,Back
+651,Dips,94.4,10,2021-08-13,2021,944.4,Bodyweight,Chest
+652,Push-Ups,30.2,11,2021-08-13,2021,332.5,Bodyweight,Chest
+653,Lunges,31.3,10,2021-08-13,2021,313.3,Bodyweight,Legs
+654,Plank,29.9,12,2021-08-13,2021,358.9,Bodyweight,Core
+655,Leg Raises,28.3,11,2021-08-13,2021,310.8,Bodyweight,Core
+656,Sit-Ups,33.6,13,2021-08-13,2021,436.8,Bodyweight,Core
+657,Russian Twists,33.6,10,2021-08-13,2021,336,Bodyweight,Core
+658,Burpees,29.9,10,2021-08-13,2021,299.2,Bodyweight,Full Body
+659,Kettlebell Swings,33.8,9,2021-08-13,2021,304.4,Kettlebell,Full Body
+660,Farmers Walk,33.9,10,2021-08-13,2021,339,Dumbbell,Full Body
+661,Squats,85.5,7,2021-08-20,2021,598.2,Barbell,Legs
+662,Deadlifts,28.8,9,2021-08-20,2021,258.9,Barbell,Legs
+663,Bench Press,27.4,6,2021-08-20,2021,164.4,Barbell,Chest
+664,Overhead Press,27.9,11,2021-08-20,2021,306.7,Barbell,Shoulders
+665,Barbell Rows,30.1,10,2021-08-20,2021,301,Barbell,Back
+666,Bicep Curl,46,12,2021-08-20,2021,552,Dumbbell,Arms
+667,Tricep Extension,29.7,12,2021-08-20,2021,356.5,Dumbbell,Arms
+668,Leg Press,29.9,9,2021-08-20,2021,269.5,Machine,Legs
+669,Pull-Ups,34.7,12,2021-08-20,2021,416.6,Bodyweight,Back
+670,Chin-Ups,32.7,8,2021-08-20,2021,261.7,Bodyweight,Back
+671,Dips,86.9,9,2021-08-20,2021,782.2,Bodyweight,Chest
+672,Push-Ups,27.5,11,2021-08-20,2021,302.2,Bodyweight,Chest
+673,Lunges,31,13,2021-08-20,2021,403.4,Bodyweight,Legs
+674,Plank,28.4,11,2021-08-20,2021,312.6,Bodyweight,Core
+675,Leg Raises,34.2,9,2021-08-20,2021,307.8,Bodyweight,Core
+676,Sit-Ups,35.7,11,2021-08-20,2021,392.7,Bodyweight,Core
+677,Russian Twists,26.7,10,2021-08-20,2021,267,Bodyweight,Core
+678,Burpees,32.3,11,2021-08-20,2021,355.7,Bodyweight,Full Body
+679,Kettlebell Swings,26.8,13,2021-08-20,2021,348.9,Kettlebell,Full Body
+680,Farmers Walk,25.8,12,2021-08-20,2021,309.9,Dumbbell,Full Body
+681,Squats,84.5,7,2021-08-27,2021,591.3,Barbell,Legs
+682,Deadlifts,29.6,5,2021-08-27,2021,147.8,Barbell,Legs
+683,Bench Press,31,11,2021-08-27,2021,340.6,Barbell,Chest
+684,Overhead Press,30.6,9,2021-08-27,2021,275.4,Barbell,Shoulders
+685,Barbell Rows,33.7,11,2021-08-27,2021,371,Barbell,Back
+686,Bicep Curl,43.6,10,2021-08-27,2021,436,Dumbbell,Arms
+687,Tricep Extension,28.5,12,2021-08-27,2021,341.8,Dumbbell,Arms
+688,Leg Press,32.4,10,2021-08-27,2021,324.2,Machine,Legs
+689,Pull-Ups,26.6,10,2021-08-27,2021,266,Bodyweight,Back
+690,Chin-Ups,29.2,9,2021-08-27,2021,263.1,Bodyweight,Back
+691,Dips,82.5,7,2021-08-27,2021,577.2,Bodyweight,Chest
+692,Push-Ups,30.2,8,2021-08-27,2021,241.7,Bodyweight,Chest
+693,Lunges,35.1,8,2021-08-27,2021,280.5,Bodyweight,Legs
+694,Plank,29.2,10,2021-08-27,2021,291.6,Bodyweight,Core
+695,Leg Raises,24.9,8,2021-08-27,2021,199.2,Bodyweight,Core
+696,Sit-Ups,27.6,12,2021-08-27,2021,331.2,Bodyweight,Core
+697,Russian Twists,33.9,14,2021-08-27,2021,474.6,Bodyweight,Core
+698,Burpees,25.1,7,2021-08-27,2021,176,Bodyweight,Full Body
+699,Kettlebell Swings,32.9,11,2021-08-27,2021,362.3,Kettlebell,Full Body
+700,Farmers Walk,36.4,10,2021-08-27,2021,363.5,Dumbbell,Full Body
+701,Squats,91,12,2021-09-03,2021,1092.1,Barbell,Legs
+702,Deadlifts,29.8,10,2021-09-03,2021,298.1,Barbell,Legs
+703,Bench Press,36.4,12,2021-09-03,2021,436.9,Barbell,Chest
+704,Overhead Press,29.4,11,2021-09-03,2021,323.9,Barbell,Shoulders
+705,Barbell Rows,26.4,7,2021-09-03,2021,185,Barbell,Back
+706,Bicep Curl,46.4,12,2021-09-03,2021,556.8,Dumbbell,Arms
+707,Tricep Extension,33.3,10,2021-09-03,2021,332.9,Dumbbell,Arms
+708,Leg Press,23.9,10,2021-09-03,2021,239.2,Machine,Legs
+709,Pull-Ups,34.3,13,2021-09-03,2021,445.3,Bodyweight,Back
+710,Chin-Ups,33.3,9,2021-09-03,2021,300,Bodyweight,Back
+711,Dips,90.9,10,2021-09-03,2021,909.2,Bodyweight,Chest
+712,Push-Ups,35.9,10,2021-09-03,2021,358.9,Bodyweight,Chest
+713,Lunges,26.5,10,2021-09-03,2021,264.6,Bodyweight,Legs
+714,Plank,35.4,7,2021-09-03,2021,247.7,Bodyweight,Core
+715,Leg Raises,31.8,9,2021-09-03,2021,286.2,Bodyweight,Core
+716,Sit-Ups,35.4,12,2021-09-03,2021,424.8,Bodyweight,Core
+717,Russian Twists,28.4,12,2021-09-03,2021,340.9,Bodyweight,Core
+718,Burpees,30.2,11,2021-09-03,2021,331.9,Bodyweight,Full Body
+719,Kettlebell Swings,30.3,10,2021-09-03,2021,303.2,Kettlebell,Full Body
+720,Farmers Walk,29.7,8,2021-09-03,2021,238,Dumbbell,Full Body
+721,Squats,89.8,11,2021-09-10,2021,987.7,Barbell,Legs
+722,Deadlifts,36.3,10,2021-09-10,2021,363.4,Barbell,Legs
+723,Bench Press,28.5,11,2021-09-10,2021,313.6,Barbell,Chest
+724,Overhead Press,35.9,7,2021-09-10,2021,251.3,Barbell,Shoulders
+725,Barbell Rows,34.4,10,2021-09-10,2021,344.4,Barbell,Back
+726,Bicep Curl,40.4,8,2021-09-10,2021,323.2,Dumbbell,Arms
+727,Tricep Extension,27.9,11,2021-09-10,2021,306.7,Dumbbell,Arms
+728,Leg Press,32.9,11,2021-09-10,2021,361.4,Machine,Legs
+729,Pull-Ups,28.7,12,2021-09-10,2021,345,Bodyweight,Back
+730,Chin-Ups,31.8,10,2021-09-10,2021,318.3,Bodyweight,Back
+731,Dips,95.8,11,2021-09-10,2021,1054,Bodyweight,Chest
+732,Push-Ups,29.9,9,2021-09-10,2021,268.9,Bodyweight,Chest
+733,Lunges,37.8,10,2021-09-10,2021,378.1,Bodyweight,Legs
+734,Plank,29.3,10,2021-09-10,2021,293.1,Bodyweight,Core
+735,Leg Raises,28.5,12,2021-09-10,2021,342.3,Bodyweight,Core
+736,Sit-Ups,27,11,2021-09-10,2021,297,Bodyweight,Core
+737,Russian Twists,32.1,5,2021-09-10,2021,160.5,Bodyweight,Core
+738,Burpees,29.3,6,2021-09-10,2021,175.9,Bodyweight,Full Body
+739,Kettlebell Swings,33.5,9,2021-09-10,2021,301.3,Kettlebell,Full Body
+740,Farmers Walk,32.7,10,2021-09-10,2021,326.7,Dumbbell,Full Body
+741,Squats,97.8,9,2021-09-17,2021,879.8,Barbell,Legs
+742,Deadlifts,29.9,11,2021-09-17,2021,328.5,Barbell,Legs
+743,Bench Press,32.9,7,2021-09-17,2021,230.2,Barbell,Chest
+744,Overhead Press,25.4,11,2021-09-17,2021,279.4,Barbell,Shoulders
+745,Barbell Rows,29.2,14,2021-09-17,2021,408.3,Barbell,Back
+746,Bicep Curl,45.2,9,2021-09-17,2021,406.8,Dumbbell,Arms
+747,Tricep Extension,38.9,9,2021-09-17,2021,349.9,Dumbbell,Arms
+748,Leg Press,30,10,2021-09-17,2021,299.5,Machine,Legs
+749,Pull-Ups,31.9,11,2021-09-17,2021,350.5,Bodyweight,Back
+750,Chin-Ups,35.1,11,2021-09-17,2021,385.7,Bodyweight,Back
+751,Dips,100,9,2021-09-17,2021,900,Bodyweight,Chest
+752,Push-Ups,31.2,13,2021-09-17,2021,405.7,Bodyweight,Chest
+753,Lunges,30.4,8,2021-09-17,2021,243.3,Bodyweight,Legs
+754,Plank,36.6,9,2021-09-17,2021,329.8,Bodyweight,Core
+755,Leg Raises,32.1,8,2021-09-17,2021,256.8,Bodyweight,Core
+756,Sit-Ups,34.2,12,2021-09-17,2021,410.4,Bodyweight,Core
+757,Russian Twists,33.9,10,2021-09-17,2021,339,Bodyweight,Core
+758,Burpees,29.5,7,2021-09-17,2021,206.7,Bodyweight,Full Body
+759,Kettlebell Swings,36.1,9,2021-09-17,2021,325,Kettlebell,Full Body
+760,Farmers Walk,33.1,10,2021-09-17,2021,331.2,Dumbbell,Full Body
+761,Squats,100,11,2021-09-24,2021,1100,Barbell,Legs
+762,Deadlifts,34.3,12,2021-09-24,2021,411.4,Barbell,Legs
+763,Bench Press,28.5,11,2021-09-24,2021,313.6,Barbell,Chest
+764,Overhead Press,38.1,10,2021-09-24,2021,381.5,Barbell,Shoulders
+765,Barbell Rows,36,12,2021-09-24,2021,432.1,Barbell,Back
+766,Bicep Curl,36.8,9,2021-09-24,2021,331.2,Dumbbell,Arms
+767,Tricep Extension,29.4,13,2021-09-24,2021,382.6,Dumbbell,Arms
+768,Leg Press,31.9,11,2021-09-24,2021,351.4,Machine,Legs
+769,Pull-Ups,33.8,9,2021-09-24,2021,304.5,Bodyweight,Back
+770,Chin-Ups,34.8,7,2021-09-24,2021,243.4,Bodyweight,Back
+771,Dips,91,8,2021-09-24,2021,728,Bodyweight,Chest
+772,Push-Ups,28.5,8,2021-09-24,2021,227.9,Bodyweight,Chest
+773,Lunges,37.8,12,2021-09-24,2021,454.2,Bodyweight,Legs
+774,Plank,32.8,11,2021-09-24,2021,360.4,Bodyweight,Core
+775,Leg Raises,27.9,6,2021-09-24,2021,167.4,Bodyweight,Core
+776,Sit-Ups,30.3,10,2021-09-24,2021,303,Bodyweight,Core
+777,Russian Twists,34.8,9,2021-09-24,2021,313.2,Bodyweight,Core
+778,Burpees,29.6,13,2021-09-24,2021,384.4,Bodyweight,Full Body
+779,Kettlebell Swings,38,10,2021-09-24,2021,380.2,Kettlebell,Full Body
+780,Farmers Walk,36.9,10,2021-09-24,2021,368.5,Dumbbell,Full Body
+781,Squats,105,9,2021-10-01,2021,945,Barbell,Legs
+782,Deadlifts,29.2,9,2021-10-01,2021,263.1,Barbell,Legs
+783,Bench Press,35.5,9,2021-10-01,2021,319.3,Barbell,Chest
+784,Overhead Press,29.7,10,2021-10-01,2021,296.8,Barbell,Shoulders
+785,Barbell Rows,37,7,2021-10-01,2021,259,Barbell,Back
+786,Bicep Curl,44,14,2021-10-01,2021,616,Dumbbell,Arms
+787,Tricep Extension,39.1,10,2021-10-01,2021,390.6,Dumbbell,Arms
+788,Leg Press,28,11,2021-10-01,2021,308.3,Machine,Legs
+789,Pull-Ups,37.1,10,2021-10-01,2021,371.5,Bodyweight,Back
+790,Chin-Ups,39,10,2021-10-01,2021,390,Bodyweight,Back
+791,Dips,89,11,2021-10-01,2021,979,Bodyweight,Chest
+792,Push-Ups,33.7,9,2021-10-01,2021,303.3,Bodyweight,Chest
+793,Lunges,36.7,9,2021-10-01,2021,330.1,Bodyweight,Legs
+794,Plank,36.7,11,2021-10-01,2021,403.5,Bodyweight,Core
+795,Leg Raises,32.1,11,2021-10-01,2021,353.1,Bodyweight,Core
+796,Sit-Ups,26.4,7,2021-10-01,2021,184.8,Bodyweight,Core
+797,Russian Twists,30.3,10,2021-10-01,2021,303,Bodyweight,Core
+798,Burpees,31.2,8,2021-10-01,2021,249.6,Bodyweight,Full Body
+799,Kettlebell Swings,32,12,2021-10-01,2021,384.5,Kettlebell,Full Body
+800,Farmers Walk,30.2,11,2021-10-01,2021,332.7,Dumbbell,Full Body
+801,Squats,111,14,2021-10-08,2021,1554,Barbell,Legs
+802,Deadlifts,39,10,2021-10-08,2021,390,Barbell,Legs
+803,Bench Press,36.8,13,2021-10-08,2021,478.4,Barbell,Chest
+804,Overhead Press,41.9,10,2021-10-08,2021,418.7,Barbell,Shoulders
+805,Barbell Rows,41.1,11,2021-10-08,2021,452,Barbell,Back
+806,Bicep Curl,36.4,10,2021-10-08,2021,364,Dumbbell,Arms
+807,Tricep Extension,36.7,10,2021-10-08,2021,367,Dumbbell,Arms
+808,Leg Press,34.9,9,2021-10-08,2021,313.8,Machine,Legs
+809,Pull-Ups,29.7,9,2021-10-08,2021,267.4,Bodyweight,Back
+810,Chin-Ups,30,12,2021-10-08,2021,360.5,Bodyweight,Back
+811,Dips,114,9,2021-10-08,2021,1026,Bodyweight,Chest
+812,Push-Ups,35.3,7,2021-10-08,2021,247.4,Bodyweight,Chest
+813,Lunges,42.9,9,2021-10-08,2021,385.8,Bodyweight,Legs
+814,Plank,35.6,12,2021-10-08,2021,427.5,Bodyweight,Core
+815,Leg Raises,30,8,2021-10-08,2021,239.8,Bodyweight,Core
+816,Sit-Ups,25.2,6,2021-10-08,2021,151.2,Bodyweight,Core
+817,Russian Twists,34.8,6,2021-10-08,2021,208.8,Bodyweight,Core
+818,Burpees,30.5,9,2021-10-08,2021,274.4,Bodyweight,Full Body
+819,Kettlebell Swings,33.2,10,2021-10-08,2021,331.7,Kettlebell,Full Body
+820,Farmers Walk,33.7,9,2021-10-08,2021,303.7,Dumbbell,Full Body
+821,Squats,111,11,2021-10-15,2021,1221,Barbell,Legs
+822,Deadlifts,37.6,8,2021-10-15,2021,301.1,Barbell,Legs
+823,Bench Press,41.9,9,2021-10-15,2021,377.4,Barbell,Chest
+824,Overhead Press,36.7,11,2021-10-15,2021,403.9,Barbell,Shoulders
+825,Barbell Rows,30.6,7,2021-10-15,2021,214.5,Barbell,Back
+826,Bicep Curl,32.8,12,2021-10-15,2021,393.6,Dumbbell,Arms
+827,Tricep Extension,36,12,2021-10-15,2021,432,Dumbbell,Arms
+828,Leg Press,32.3,12,2021-10-15,2021,387.8,Machine,Legs
+829,Pull-Ups,36.3,9,2021-10-15,2021,326.3,Bodyweight,Back
+830,Chin-Ups,32.9,7,2021-10-15,2021,230.4,Bodyweight,Back
+831,Dips,81,10,2021-10-15,2021,810,Bodyweight,Chest
+832,Push-Ups,42.6,10,2021-10-15,2021,425.8,Bodyweight,Chest
+833,Lunges,31.7,10,2021-10-15,2021,317.1,Bodyweight,Legs
+834,Plank,38.8,12,2021-10-15,2021,465.9,Bodyweight,Core
+835,Leg Raises,32.1,9,2021-10-15,2021,288.9,Bodyweight,Core
+836,Sit-Ups,26.7,5,2021-10-15,2021,133.5,Bodyweight,Core
+837,Russian Twists,29.7,13,2021-10-15,2021,386.1,Bodyweight,Core
+838,Burpees,31.9,12,2021-10-15,2021,383.1,Bodyweight,Full Body
+839,Kettlebell Swings,26.9,9,2021-10-15,2021,242,Kettlebell,Full Body
+840,Farmers Walk,25.4,12,2021-10-15,2021,305.2,Dumbbell,Full Body
+841,Squats,113,9,2021-10-22,2021,1017,Barbell,Legs
+842,Deadlifts,41.7,9,2021-10-22,2021,375,Barbell,Legs
+843,Bench Press,32.4,9,2021-10-22,2021,292,Barbell,Chest
+844,Overhead Press,36.2,8,2021-10-22,2021,289.7,Barbell,Shoulders
+845,Barbell Rows,37.4,10,2021-10-22,2021,374.5,Barbell,Back
+846,Bicep Curl,47.2,12,2021-10-22,2021,566.4,Dumbbell,Arms
+847,Tricep Extension,31.2,6,2021-10-22,2021,187.1,Dumbbell,Arms
+848,Leg Press,30.9,12,2021-10-22,2021,370.3,Machine,Legs
+849,Pull-Ups,29.8,6,2021-10-22,2021,178.8,Bodyweight,Back
+850,Chin-Ups,27.1,13,2021-10-22,2021,352.8,Bodyweight,Back
+851,Dips,87,12,2021-10-22,2021,1044,Bodyweight,Chest
+852,Push-Ups,34.6,9,2021-10-22,2021,311.5,Bodyweight,Chest
+853,Lunges,35.3,10,2021-10-22,2021,353.5,Bodyweight,Legs
+854,Plank,31.3,8,2021-10-22,2021,250.1,Bodyweight,Core
+855,Leg Raises,30,12,2021-10-22,2021,360,Bodyweight,Core
+856,Sit-Ups,35.7,12,2021-10-22,2021,428.4,Bodyweight,Core
+857,Russian Twists,28.2,8,2021-10-22,2021,225.6,Bodyweight,Core
+858,Burpees,30.7,10,2021-10-22,2021,307.1,Bodyweight,Full Body
+859,Kettlebell Swings,30.6,10,2021-10-22,2021,306.1,Kettlebell,Full Body
+860,Farmers Walk,32,12,2021-10-22,2021,384.3,Dumbbell,Full Body
+861,Squats,98,13,2021-10-29,2021,1274,Barbell,Legs
+862,Deadlifts,34.5,9,2021-10-29,2021,310.2,Barbell,Legs
+863,Bench Press,37.1,13,2021-10-29,2021,482.1,Barbell,Chest
+864,Overhead Press,32.1,12,2021-10-29,2021,384.7,Barbell,Shoulders
+865,Barbell Rows,29.8,13,2021-10-29,2021,387.8,Barbell,Back
+866,Bicep Curl,39.2,11,2021-10-29,2021,431.2,Dumbbell,Arms
+867,Tricep Extension,36.4,14,2021-10-29,2021,509.8,Dumbbell,Arms
+868,Leg Press,32.5,12,2021-10-29,2021,390.5,Machine,Legs
+869,Pull-Ups,29.1,9,2021-10-29,2021,261.7,Bodyweight,Back
+870,Chin-Ups,29.5,8,2021-10-29,2021,235.9,Bodyweight,Back
+871,Dips,95.2,11,2021-10-29,2021,1047.6,Bodyweight,Chest
+872,Push-Ups,36.6,10,2021-10-29,2021,366.1,Bodyweight,Chest
+873,Lunges,32.4,11,2021-10-29,2021,356,Bodyweight,Legs
+874,Plank,36.7,8,2021-10-29,2021,293.7,Bodyweight,Core
+875,Leg Raises,28.3,8,2021-10-29,2021,226.5,Bodyweight,Core
+876,Sit-Ups,27.9,9,2021-10-29,2021,251.1,Bodyweight,Core
+877,Russian Twists,34.2,10,2021-10-29,2021,342,Bodyweight,Core
+878,Burpees,30.5,12,2021-10-29,2021,366.3,Bodyweight,Full Body
+879,Kettlebell Swings,36.7,8,2021-10-29,2021,293.8,Kettlebell,Full Body
+880,Farmers Walk,41.8,8,2021-10-29,2021,334.4,Dumbbell,Full Body
+881,Squats,100,10,2021-11-05,2021,1000,Barbell,Legs
+882,Deadlifts,37.1,9,2021-11-05,2021,333.8,Barbell,Legs
+883,Bench Press,28.8,13,2021-11-05,2021,374,Barbell,Chest
+884,Overhead Press,36.9,11,2021-11-05,2021,406.2,Barbell,Shoulders
+885,Barbell Rows,29.9,9,2021-11-05,2021,269.4,Barbell,Back
+886,Bicep Curl,36,9,2021-11-05,2021,324,Dumbbell,Arms
+887,Tricep Extension,31.6,9,2021-11-05,2021,284.7,Dumbbell,Arms
+888,Leg Press,27.9,9,2021-11-05,2021,251.2,Machine,Legs
+889,Pull-Ups,35.1,8,2021-11-05,2021,280.9,Bodyweight,Back
+890,Chin-Ups,37.9,8,2021-11-05,2021,303.6,Bodyweight,Back
+891,Dips,89,12,2021-11-05,2021,1068,Bodyweight,Chest
+892,Push-Ups,27.8,10,2021-11-05,2021,278.1,Bodyweight,Chest
+893,Lunges,31.7,9,2021-11-05,2021,285.6,Bodyweight,Legs
+894,Plank,31.5,11,2021-11-05,2021,346.5,Bodyweight,Core
+895,Leg Raises,26.7,11,2021-11-05,2021,293.7,Bodyweight,Core
+896,Sit-Ups,29.4,10,2021-11-05,2021,294,Bodyweight,Core
+897,Russian Twists,27.9,12,2021-11-05,2021,334.8,Bodyweight,Core
+898,Burpees,27.7,7,2021-11-05,2021,193.9,Bodyweight,Full Body
+899,Kettlebell Swings,29.6,12,2021-11-05,2021,355.4,Kettlebell,Full Body
+900,Farmers Walk,30.4,7,2021-11-05,2021,212.8,Dumbbell,Full Body
+901,Squats,80,12,2021-11-12,2021,960,Barbell,Legs
+902,Deadlifts,29.2,8,2021-11-12,2021,233.5,Barbell,Legs
+903,Bench Press,31,13,2021-11-12,2021,403.5,Barbell,Chest
+904,Overhead Press,32.6,10,2021-11-12,2021,326,Barbell,Shoulders
+905,Barbell Rows,34.6,11,2021-11-12,2021,380.4,Barbell,Back
+906,Bicep Curl,33.2,10,2021-11-12,2021,332,Dumbbell,Arms
+907,Tricep Extension,31.8,10,2021-11-12,2021,318.2,Dumbbell,Arms
+908,Leg Press,28.1,12,2021-11-12,2021,337,Machine,Legs
+909,Pull-Ups,29.9,11,2021-11-12,2021,329.1,Bodyweight,Back
+910,Chin-Ups,29.8,8,2021-11-12,2021,238.1,Bodyweight,Back
+911,Dips,76.5,13,2021-11-12,2021,994.5,Bodyweight,Chest
+912,Push-Ups,31.6,14,2021-11-12,2021,442.7,Bodyweight,Chest
+913,Lunges,36.6,11,2021-11-12,2021,402.9,Bodyweight,Legs
+914,Plank,31.8,12,2021-11-12,2021,381.8,Bodyweight,Core
+915,Leg Raises,30,6,2021-11-12,2021,180,Bodyweight,Core
+916,Sit-Ups,28.5,11,2021-11-12,2021,313.5,Bodyweight,Core
+917,Russian Twists,25.5,11,2021-11-12,2021,280.5,Bodyweight,Core
+918,Burpees,33.2,14,2021-11-12,2021,464.9,Bodyweight,Full Body
+919,Kettlebell Swings,26.6,11,2021-11-12,2021,292.2,Kettlebell,Full Body
+920,Farmers Walk,30.4,11,2021-11-12,2021,334.2,Dumbbell,Full Body
+921,Squats,76.4,8,2021-11-19,2021,610.9,Barbell,Legs
+922,Deadlifts,31.6,12,2021-11-19,2021,379.2,Barbell,Legs
+923,Bench Press,34.1,11,2021-11-19,2021,375.1,Barbell,Chest
+924,Overhead Press,30,11,2021-11-19,2021,329.9,Barbell,Shoulders
+925,Barbell Rows,30,13,2021-11-19,2021,390.4,Barbell,Back
+926,Bicep Curl,43.6,7,2021-11-19,2021,305.2,Dumbbell,Arms
+927,Tricep Extension,35.8,10,2021-11-19,2021,358.4,Dumbbell,Arms
+928,Leg Press,32.5,13,2021-11-19,2021,422.3,Machine,Legs
+929,Pull-Ups,26.4,11,2021-11-19,2021,290,Bodyweight,Back
+930,Chin-Ups,26.8,10,2021-11-19,2021,267.5,Bodyweight,Back
+931,Dips,72.2,11,2021-11-19,2021,794,Bodyweight,Chest
+932,Push-Ups,33.7,11,2021-11-19,2021,370.7,Bodyweight,Chest
+933,Lunges,30.1,9,2021-11-19,2021,270.7,Bodyweight,Legs
+934,Plank,35.7,9,2021-11-19,2021,321.2,Bodyweight,Core
+935,Leg Raises,28.1,10,2021-11-19,2021,280.6,Bodyweight,Core
+936,Sit-Ups,30,11,2021-11-19,2021,330,Bodyweight,Core
+937,Russian Twists,33,10,2021-11-19,2021,330,Bodyweight,Core
+938,Burpees,30.8,8,2021-11-19,2021,246.3,Bodyweight,Full Body
+939,Kettlebell Swings,34.9,8,2021-11-19,2021,279.5,Kettlebell,Full Body
+940,Farmers Walk,36.6,11,2021-11-19,2021,402.5,Dumbbell,Full Body
+941,Squats,79.5,10,2021-11-26,2021,795.5,Barbell,Legs
+942,Deadlifts,36,13,2021-11-26,2021,468.6,Barbell,Legs
+943,Bench Press,29.8,9,2021-11-26,2021,268.4,Barbell,Chest
+944,Overhead Press,37.4,10,2021-11-26,2021,374.1,Barbell,Shoulders
+945,Barbell Rows,28.9,11,2021-11-26,2021,318,Barbell,Back
+946,Bicep Curl,40.8,8,2021-11-26,2021,326.4,Dumbbell,Arms
+947,Tricep Extension,31.2,8,2021-11-26,2021,249.4,Dumbbell,Arms
+948,Leg Press,28.5,12,2021-11-26,2021,341.8,Machine,Legs
+949,Pull-Ups,35,8,2021-11-26,2021,280.2,Bodyweight,Back
+950,Chin-Ups,34.9,8,2021-11-26,2021,278.8,Bodyweight,Back
+951,Dips,82,7,2021-11-26,2021,574.3,Bodyweight,Chest
+952,Push-Ups,26.3,13,2021-11-26,2021,342.3,Bodyweight,Chest
+953,Lunges,32.8,9,2021-11-26,2021,294.9,Bodyweight,Legs
+954,Plank,32.6,10,2021-11-26,2021,326.4,Bodyweight,Core
+955,Leg Raises,33.9,11,2021-11-26,2021,372.9,Bodyweight,Core
+956,Sit-Ups,25.5,10,2021-11-26,2021,255,Bodyweight,Core
+957,Russian Twists,27,12,2021-11-26,2021,324,Bodyweight,Core
+958,Burpees,33.6,7,2021-11-26,2021,235.5,Bodyweight,Full Body
+959,Kettlebell Swings,27,10,2021-11-26,2021,270,Kettlebell,Full Body
+960,Farmers Walk,28.7,8,2021-11-26,2021,229.6,Dumbbell,Full Body
+961,Squats,78.9,13,2021-12-03,2021,1025.4,Barbell,Legs
+962,Deadlifts,32.4,12,2021-12-03,2021,389,Barbell,Legs
+963,Bench Press,31.7,10,2021-12-03,2021,317.3,Barbell,Chest
+964,Overhead Press,30.6,11,2021-12-03,2021,336.6,Barbell,Shoulders
+965,Barbell Rows,37.5,15,2021-12-03,2021,562.2,Barbell,Back
+966,Bicep Curl,40.4,10,2021-12-03,2021,404,Dumbbell,Arms
+967,Tricep Extension,28.9,7,2021-12-03,2021,202.2,Dumbbell,Arms
+968,Leg Press,37.2,13,2021-12-03,2021,483.5,Machine,Legs
+969,Pull-Ups,28.9,15,2021-12-03,2021,433.4,Bodyweight,Back
+970,Chin-Ups,26.7,13,2021-12-03,2021,347.5,Bodyweight,Back
+971,Dips,75.6,12,2021-12-03,2021,907,Bodyweight,Chest
+972,Push-Ups,29.5,11,2021-12-03,2021,324.4,Bodyweight,Chest
+973,Lunges,34.2,7,2021-12-03,2021,239.6,Bodyweight,Legs
+974,Plank,27.4,9,2021-12-03,2021,246.9,Bodyweight,Core
+975,Leg Raises,29.4,10,2021-12-03,2021,294.1,Bodyweight,Core
+976,Sit-Ups,24.9,11,2021-12-03,2021,273.9,Bodyweight,Core
+977,Russian Twists,28.5,10,2021-12-03,2021,285,Bodyweight,Core
+978,Burpees,29.5,12,2021-12-03,2021,353.8,Bodyweight,Full Body
+979,Kettlebell Swings,28.7,8,2021-12-03,2021,229.4,Kettlebell,Full Body
+980,Farmers Walk,29.8,6,2021-12-03,2021,178.7,Dumbbell,Full Body
+981,Squats,80.8,9,2021-12-10,2021,727.6,Barbell,Legs
+982,Deadlifts,31.8,11,2021-12-10,2021,349.6,Barbell,Legs
+983,Bench Press,38.5,11,2021-12-10,2021,423.5,Barbell,Chest
+984,Overhead Press,29.2,8,2021-12-10,2021,233.8,Barbell,Shoulders
+985,Barbell Rows,27.9,10,2021-12-10,2021,279.5,Barbell,Back
+986,Bicep Curl,36.4,5,2021-12-10,2021,182,Dumbbell,Arms
+987,Tricep Extension,36.5,7,2021-12-10,2021,255.4,Dumbbell,Arms
+988,Leg Press,30,10,2021-12-10,2021,300.2,Machine,Legs
+989,Pull-Ups,30.9,10,2021-12-10,2021,308.6,Bodyweight,Back
+990,Chin-Ups,29.4,11,2021-12-10,2021,323,Bodyweight,Back
+991,Dips,78.7,10,2021-12-10,2021,786.7,Bodyweight,Chest
+992,Push-Ups,41.3,11,2021-12-10,2021,454.8,Bodyweight,Chest
+993,Lunges,26.7,11,2021-12-10,2021,293.5,Bodyweight,Legs
+994,Plank,34.3,9,2021-12-10,2021,308.5,Bodyweight,Core
+995,Leg Raises,30,8,2021-12-10,2021,240,Bodyweight,Core
+996,Sit-Ups,30.9,6,2021-12-10,2021,185.4,Bodyweight,Core
+997,Russian Twists,28.7,8,2021-12-10,2021,229.2,Bodyweight,Core
+998,Burpees,32.2,10,2021-12-10,2021,321.7,Bodyweight,Full Body
+999,Kettlebell Swings,29.6,12,2021-12-10,2021,355.2,Kettlebell,Full Body
+1000,Farmers Walk,28.9,9,2021-12-10,2021,260.4,Dumbbell,Full Body
